@@ -39,12 +39,12 @@
 							<table>
                                 <tr>
 									<td class="right">
-										<span class="stitle"><input type="radio" name="bl" value="toctitle" CHECKED />&nbsp;ವಿಷಯಾನುಕ್ರಮಣಿಕೆ</span>
+										<span class="stitle"><input type="radio" name="bl" value="btitle" CHECKED />&nbsp;ಗ್ರಂಥಗಳ ಶೀರ್ಷಿಕೆ</span>
 									</td>
 								</tr>
 								<tr>
 									<td class="right">
-										<span class="stitle"><input type="radio" name="bl" value="btitle" />&nbsp;ಗ್ರಂಥಗಳು</span>
+										<span class="stitle"><input type="radio" name="bl" value="toctitle"/>&nbsp;ಗ್ರಂಥಗಳ ವಿಷಯಾನುಕ್ರಮಣಿಕೆ</span>
 									</td>
 								</tr>
 								<tr>

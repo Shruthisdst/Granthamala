@@ -31,11 +31,16 @@ include("connect.php");
 
 $book_id = $_GET['book_id'];
 
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
-$query = "select * from GM_Toc where book_id='$book_id'";
-$result = mysql_query($query);
-$num_rows = mysql_num_rows($result);
+try
+{
+    $db = new PDO("mysql:host=localhost;dbname=".$database.";charset=utf8", $user, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+    echo $e->getMessage();
+    die();
+}
 
 $stack = array();
 $p_stack = array();
@@ -48,21 +53,21 @@ $plus_link = "<img src=\"images/plus.gif\" alt=\"\" onclick=\"display_block(this
 //$plus_link = "<a href=\"#\" onclick=\"display_block(this)\"><img src=\"plus.gif\" alt=\"\"></a>";
 $bullet = "<img src=\"images/bullet_1.gif\" alt=\"\" />";
 
-if($num_rows)
+$query = $db->query("select * from GM_Toc where book_id='$book_id'");
+$count = $query->rowCount();
+if($count)
 {
     echo "<div class=\"treeview\">";
-	for($i=1;$i<=$num_rows;$i++)
-	{
-		$row = mysql_fetch_assoc($result);
-        $book_id = $row['book_id'];
-		$btitle = $row['btitle'];
-		$title = $row['title'];
-		$level = $row['level'];
-		$pages = $row['start_pages'];
-        
-		$btitle = preg_replace('/-/'," &ndash; ", $btitle);
-		$btitle = preg_replace('/—/'," &mdash; ", $btitle);
-        
+    while($row = $query->fetch(PDO::FETCH_OBJ))
+    {
+        $book_id = $row->book_id;
+        $btitle = $row->btitle;
+        $title = $row->title;
+        $level = $row->level;
+        $pages = $row->start_pages;
+           
+        $btitle = preg_replace('/-/'," &ndash; ", $btitle);
+        $btitle = preg_replace('/—/'," &mdash; ", $btitle);
         if($flag)
         {
             echo "<div class=\"book\">$btitle</div>";
@@ -70,70 +75,65 @@ if($num_rows)
             echo "<div class=\"toc_title\">ವಿಷಯಾನುಕ್ರಮಣಿಕೆ</div>";
             $flag = 0;
         }
-		$title = preg_replace('/—/',"",$title);
-		$title = preg_replace('/-/'," &ndash; ", $title);
-		if($first)
-		{
-			array_push($stack,$level);
-			$ul_id++;
-			echo "<ul id=\"ul_id$ul_id\">\n";
-			array_push($p_stack,$ul_id);
-			$li_id++;
-			$deffer = display_tabs($level) . "<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
-			$first = 0;
-		}
-		elseif($level > $stack[sizeof($stack)-1])
-		{
-			$deffer = preg_replace('/:rep:/',"$plus_link",$deffer);
-			echo $deffer;
+        $title = preg_replace('/—/',"",$title);
+        $title = preg_replace('/-/'," &ndash; ", $title);
+        if($first)
+        {
+            array_push($stack,$level);
+            $ul_id++;
+            echo "<ul id=\"ul_id$ul_id\">\n";
+            array_push($p_stack,$ul_id);
+            $li_id++;
+            $deffer = display_tabs($level) . "<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+            $first = 0;
+        }
+        elseif($level > $stack[sizeof($stack)-1])
+        {
+            $deffer = preg_replace('/:rep:/',"$plus_link",$deffer);
+            echo $deffer;
+            $ul_id++;
+            $li_id++;
+            array_push($stack,$level);
+            array_push($p_stack,$ul_id);
+            $deffer = "\n" . display_tabs(($level-1)) . "<ul class=\"dnone\" id=\"ul_id$ul_id\">\n";
+            $deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s2\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+        }
+        elseif($level < $stack[sizeof($stack)-1])
+        {
+            $deffer = preg_replace('/:rep:/',"$bullet",$deffer);
+            echo $deffer;
+            for($k=sizeof($stack)-1;(($k>=0) && ($level != $stack[$k]));$k--)
+            {
+                echo "</li>\n". display_tabs($level) ."</ul>\n";
+                $top = array_pop($stack);
+                $top1 = array_pop($p_stack);
+            }
+            $li_id++;
+            $deffer = display_tabs($level) . "</li>\n";
+            $deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+        }
+        elseif($level == $stack[sizeof($stack)-1])
+        {
+            $deffer = preg_replace('/:rep:/',"$bullet",$deffer);
+            echo $deffer;
+            $li_id++;
+            $deffer = "</li>\n";
+            $deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+        }
+    }
+    $deffer = preg_replace('/:rep:/',"$bullet",$deffer);
+    echo $deffer;
 
-			$ul_id++;
-			$li_id++;
-			array_push($stack,$level);
-			array_push($p_stack,$ul_id);
-			$deffer = "\n" . display_tabs(($level-1)) . "<ul class=\"dnone\" id=\"ul_id$ul_id\">\n";
-			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s2\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
-		}
-		elseif($level < $stack[sizeof($stack)-1])
-		{
-			$deffer = preg_replace('/:rep:/',"$bullet",$deffer);
-			echo $deffer;
-			
-			for($k=sizeof($stack)-1;(($k>=0) && ($level != $stack[$k]));$k--)
-			{
-				echo "</li>\n". display_tabs($level) ."</ul>\n";
-				$top = array_pop($stack);
-				$top1 = array_pop($p_stack);
-			}
-			$li_id++;
-			$deffer = display_tabs($level) . "</li>\n";
-			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
-		}
-		elseif($level == $stack[sizeof($stack)-1])
-		{
-			$deffer = preg_replace('/:rep:/',"$bullet",$deffer);
-			echo $deffer;
-			$li_id++;
-			$deffer = "</li>\n";
-			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
-		}
-	}
-
-	$deffer = preg_replace('/:rep:/',"$bullet",$deffer);
-	echo $deffer;
-
-	for($i=0;$i<sizeof($stack);$i++)
-	{
-		echo "</li>\n". display_tabs($level) ."</ul>\n";
-	}
-
-	echo "</div>";
+    for($i=0;$i<sizeof($stack);$i++)
+    {
+        echo "</li>\n". display_tabs($level) ."</ul>\n";
+    }
+    echo "</div>";
 }
 else
 {
-	echo "No data in the database";
+	echo"<div class=\"goback\">ಫಲಿತಾಂಶಗಳು ಲಭ್ಯವಿಲ್ಲ</div>";
 }
-
 function display_stack($stack)
 {
 	for($j=0;$j<sizeof($stack);$j++)
@@ -158,7 +158,6 @@ function display_tabs($num)
 	return $str_tabs;
 }
 
-mysql_close($db);
 ?>           
         </div>
         <div id="footer">

@@ -4,15 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />    
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
-    <script type="text/javascript">
-        $(document).on('ajaxStop', function() {
-   $("img.lazy").lazyload({
-        effect: 'fadeIn'
-    });
-});
-
-    </script>  
-	<title>ಗ್ರಂಥಮಾಲಾ</title>
+    <title>ಗ್ರಂಥಮಾಲಾ</title>
 </head>
 
 <body>

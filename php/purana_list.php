@@ -24,59 +24,61 @@
         </div>
         <div class="heading">ಗ್ರಂಥಗಳು</div>
         <div class="mainbody">
+
 <?php
 include("connect.php");
 
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
+try
+{
+    $db = new PDO("mysql:host=localhost;dbname=".$database.";charset=utf8", $user, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+    echo $e->getMessage();
+    die();
+}
 
-$query = "select distinct ctitle from GM_Toc";
-$result = mysql_query($query);
-$num_rows = mysql_num_rows($result);
-
-if($num_rows)
+$query = $db->query("select distinct ctitle from GM_Toc");
+$count = $query->rowCount();
+if($count)
 {
     echo "<ul>";
-	for($i=1;$i<=$num_rows;$i++)
-	{
-		$row = mysql_fetch_assoc($result);
-        $ctitle = $row['ctitle'];
-        $query1 = "select * from GM_Toc where ctitle = '$ctitle'";
-        $result1 = mysql_query($query1);
-        $num_rows1 = mysql_num_rows($result1);
+    while($row = $query->fetch(PDO::FETCH_OBJ))
+    {
+        $ctitle = $row->ctitle;
+    
+        $query1 = $db->query("select * from GM_Toc where ctitle = '$ctitle'");
+        $row1 = $query1->fetch(PDO::FETCH_OBJ);
+        
+        $btitle = $row1->btitle;
+        $book_id = $row1->book_id;
+        $level = $row1->level;
+        
+        $query2 = $db->query("select distinct book_id from GM_Toc where ctitle = '$ctitle'");
+        $volume_count = $query2->rowCount();
 
-        if($num_rows1)
+        if($ctitle != $btitle)
         {
-            $row1 = mysql_fetch_assoc($result1);
-            $btitle = $row1['btitle'];
-            $book_id = $row1['book_id'];
-            $level = $row1['level'];
-            if($ctitle != $btitle)
+            echo "\n<li class=\"book_title\"><a href=\"granthagalu.php?ctitle=".urlencode($ctitle)."\">$ctitle&nbsp;(<span style=\"font-size: 0.85em;\">$volume_count</span>&nbsp;ಸಂಪುಟಗಳು)</a></li>";
+        }
+        else
+        {
+            if($level == 0)
             {
-                 
-                echo "<li class=\"book_title\"><a href=\"granthagalu.php?ctitle=".replace_space($ctitle)."\">$ctitle</a></li>";
+                echo "\n<li class=\"book_title\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>";
             }
             else
             {
-                if($level == 0)
-                {
-                    echo "<li class=\"book_title\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>\n";
-                }
-                else
-                {
-                    echo "<li class=\"book_title\"><a href=\"treeview.php?book_id=$book_id\">$btitle</a></li>\n";
-                }
+                echo "\n<li class=\"book_title\"><a href=\"treeview.php?book_id=$book_id\">$btitle</a></li>";
             }
         }
     }
     echo "</ul>";
-}     
-mysql_close($db);
-
-function replace_space($str)
+}
+else
 {
-   $str = preg_replace('/ /', "%20", $str);
-   return $str;
+	echo"<div class=\"goback\">ಫಲಿತಾಂಶಗಳು ಲಭ್ಯವಿಲ್ಲ</div>";
 }
 ?> 
 		</div>

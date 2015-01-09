@@ -1,19 +1,22 @@
 @font-face {
-  font-family: Malige;
-  src: url('Malige-n.TTF') ;
+  font-family: Gubbi;
+  src: url('Gubbi.ttf') ;
 }
 body{
     background-image: url('../images/images.jpeg');
     background-repeat: repeat;
+    font-family: Gubbi;
 }
 .para{
     margin: 1em;
     text-align: justify;
-    padding: 1em 1em 0em 1em;
+    padding: 0em 1em 0em 1em;
     color: #3D1400;
+    font-family: Gubbi;
 }
 .page{
 	width: 900px;
+    font-family: Gubbi;    
 	margin: 0 auto;
     padding-bottom: 0.5em;
     background-image: url('../images/texture.jpeg');
@@ -57,7 +60,7 @@ body{
     text-decoration: underline;
 }
 .main_title{
-    font-family: Malige;
+    font-family: Gubbi;
     text-align: center;
     padding-top: 0em;
     letter-spacing: 1px;
@@ -75,12 +78,7 @@ body{
 }
 .mainbody{
     min-height: 39em;
-}
-.container {
-	text-align: left;
-    height: 34em;
-    overflow: auto;
-    padding: 0em 0em 0em 1em;
+    font-family: Gubbi;    
 }
 
 .image{
@@ -112,8 +110,11 @@ body{
     color: #800000;
     font-size: 0.9em;
 }
-.anuvada li .author_name {
-    color: #5C2E00;
+.book_title .author_name{
+    color: #800000;
+}
+.book_title .author_name a{
+    color: #800000;
 }
 .purana_name a{
     text-decoration: none;
@@ -126,7 +127,7 @@ body{
     line-height: 150%;
     list-style-type: disc;
     font-size: 1.1em; 
-    padding: 1.5em 0em 0.5em 0em;
+    padding: 1.5em 0em 0em 0em;
     color: #5C2E00;
     
 }
@@ -205,16 +206,16 @@ p{
     letter-spacing: 1px;
 }
 .book_title {
-    color: #731F11;
+    color: #5C2E00;
     list-style: decimal;
     margin-left: 5em;
     padding: 0em 2em 1em 0em;
     line-height: 200%;
 }
 .book_title a{
-    text-decoration: none;
-    color: #731F11;
     font-size: 1.1em;
+    text-decoration: none;
+    color: #5C2E00;
 }
 .book_title a:hover{
     text-decoration: underline;
@@ -281,7 +282,7 @@ p{
     padding-bottom: 2em;
 }
 .archive_holder{
-	margin: 1em 7em 0em 7em;
+	margin: 1em 5em 0em 5em;
     border: 2px solid #731F11;
     border-radius: 20px;
 }
@@ -373,10 +374,10 @@ select{
 }
 
 .book_list{
-    margin-left: 1em;
+    margin-left: 2em;
 }
-.title_list{
-    padding-right: 1.5em;
+.book_list .title_list{
+    margin-left: 2em;
 }
 .title_list a{
     text-decoration: none;
@@ -399,6 +400,9 @@ select{
 .titlespan{
     margin-left: 1em;
 }
+.text{
+    padding-left: 0em;
+}
 .stitle{
     margin-left: 0.5em;
 }
@@ -410,4 +414,10 @@ select{
 }
 .goback a{
     color: #5C2E00;
+}
+.sub_titlespan{
+    color: #532900;
+}
+.sub_titlespan a{
+    color: #532900;
 }

@@ -26,25 +26,31 @@
             </ul>
         </div>
         <div class="heading">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ   ಗ್ರಂಥರತ್ನಮಾಲಾ</div>
-        <div class="container">
+        <div class="mainbody">
 
 <?php
 
 include("connect.php");
 
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
-
-$bl=$_POST['bl'];
+$bl = $_POST['bl'];
 $toc_title = $_POST['text'];
 
-$stop_words = ("ಪುರಾಣಮ್|ಪುರಾಣಂ|ಪುರಾಣ");
+try
+{
+    $db = new PDO("mysql:host=localhost;dbname=".$database.";charset=utf8", $user, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+    echo $e->getMessage();
+    die();
+}
+
 
 $toc_title = rtrim($toc_title);
 $toc_title = preg_replace("/[ ]+/", " ", $toc_title);
 $toc_title = preg_replace("/^ /", "", $toc_title);
 $toc_title = preg_replace("/ $/", "", $toc_title);
-$toc_title = preg_replace("/$stop_words/", " ", $toc_title);
 
 if($toc_title=='')
 {
@@ -76,64 +82,58 @@ if($bl == "toctitle")
 	}
 	$toctitle = $text1;
     #echo $toctitle;
-    $query = "select * from GM_Toc where title REGEXP '$toctitle|$toc_title'";
+    $query = $db->query("select * from GM_Toc where title REGEXP '$toctitle|$toc_title'");
     #echo $query;
 }
 
 
 if($bl == "btitle")
 {
-    $btitle = preg_replace("/$stop_words/", " ", $btitle);
     $book = preg_replace("/[ ]+/", " ", $btitle);
     $book = preg_replace("/ $/", "", $book);
     $book = preg_replace("/^ /", "", $book);
 
-    $query = "select distinct btitle, book_id from GM_Toc where btitle REGEXP '$book'";
+    $query = $db->query("select distinct btitle, book_id from GM_Toc where btitle REGEXP '$book'");
     #echo $query;
 }
 
-$result = mysql_query($query);
-$num_rows = ($result)? mysql_num_rows($result): 0;
 $b_id = 0;
 $book_title = 1;
-if ($num_rows > 0)
+
+$count = $query->rowCount();
+if($count)
 {
-echo "<span class=\"search-result\">ಫಲಿತಾಂಶಗಳು &#8212; $num_rows</span>";
-}
-if($num_rows)
-{
+    echo "<span class=\"search-result\">ಫಲಿತಾಂಶಗಳು &#8212;&nbsp;".$count."</span>";
+
     echo "<ul class=\"book_list\">";
-    for($i=1;$i<=$num_rows;$i++)
+    while($row = $query->fetch(PDO::FETCH_OBJ))
     {
-        $row = mysql_fetch_assoc($result);
         if($bl == "btitle")
         {
-            $book_id = $row['book_id'];
-            $btitle = $row['btitle'];
-            
-            $query1 = "select * from GM_Toc where book_id = $book_id";
-            $result1 = mysql_query($query1);
-            $num_rows1 = mysql_num_rows($result1);
-            for($j=1;$j<=$num_rows1;$j++)
-            {
-                $row1 = mysql_fetch_assoc($result1);
+            $book_id = $row->book_id;
+            $btitle = $row->btitle;
 
-                $title = $row1['title'];
-                $level = $row1['level'];
-                $pages = $row1['start_pages'];
+            
+            $query1 = $db->query("select * from GM_Toc where book_id = $book_id");
+            while($row1 = $query1->fetch(PDO::FETCH_OBJ))
+            {
+                $title = $row1->title;
+                $level = $row1->level;
+                $pages = $row1->start_pages;
 
                 $btitle = preg_replace('/-/'," &ndash; ", $btitle);
-                
+                $btitle = preg_replace("/$book/", "<span style=\"color: red\">$book</span>", $btitle);
+
                 if($b_id != $book_id)
                 {
                     if($level != 0)
                     {
-                        echo "<li class=\"title_list\"><a href=\"treeview.php?book_id=$book_id\">$btitle</a></li>";
+                        echo "\n<li class=\"title_list\"><a href=\"treeview.php?book_id=$book_id\">$btitle</a></li>";
                         $b_id = $book_id;
                     }
                     else
                     {
-                        echo "<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>";
+                        echo "\n<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>";
                         $b_id = $book_id;
                     }
                 }
@@ -142,17 +142,17 @@ if($num_rows)
         }
         elseif($bl == "toctitle")
         {
-            $book_id = $row['book_id'];
-            $btitle = $row['btitle'];
-            $title = $row['title'];
-            $level = $row['level'];
-            $pages = $row['start_pages'];
+            $book_id = $row->book_id;
+            $btitle = $row->btitle;
+            $title = $row->title;
+            $level = $row->level;
+            $pages = $row->start_pages;
             
             $btitle = preg_replace('/-/'," &ndash; ", $btitle);
             $title = preg_replace('/-/'," &ndash; ", $title);
             if($book_title != $btitle)
             {
-                echo "<li class=\"booktitle\">$btitle</li>";
+                echo "\n<li class=\"booktitle\">$btitle</li>";
                 $book_title = $btitle;
             }
             $title = preg_replace("/$toc_title/", "<span style=\"color: red\">$toc_title</span>", $title);
@@ -162,7 +162,7 @@ if($num_rows)
                 $title = preg_replace("/$t_title/", "<span style=\"color: red\">$t_title</span>", $title);
             }
 
-            echo "<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></li>";
+            echo "\n<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></li>";
         }
     }
     echo "</ul>";
@@ -172,7 +172,6 @@ else
 	echo"<div class=\"goback\">ಫಲಿತಾಂಶಗಳು ಲಭ್ಯವಿಲ್ಲ</div>";
 	echo"<div class=\"goback\"><a href=\"search.php\">ಹಿಂದಿನ ಪುಟಕ್ಕೆ ಹೋಗಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</a></div>";
 }
-mysql_close($db);
 ?>
         </div>
         <div id="footer">
