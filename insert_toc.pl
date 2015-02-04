@@ -7,7 +7,7 @@ $pwd = $ARGV[3];
 
 use DBI();
 
-open(IN,"GRM_toc_uni.xml") or die "can't open GRM_toc_uni.xml\n";
+open(IN,"grm_books_toc.xml") or die "can't open grm_books_toc.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
@@ -150,7 +150,7 @@ while($line)
 	}
 	else
 	{
-		print $line . "\n";
+		#~ print $line . "\n";
 	}
 
 $line = <IN>;
@@ -166,6 +166,8 @@ sub insert_to_db()
 
 	$btitle =~ s/'/\\'/g;
 	$title =~ s/'/\\'/g;
+    
+    #~ print 'TOC->' . $book_id . "\n";
     
 	$sth2=$dbh->prepare("insert into GM_Toc values('$book_id','$btitle','$ctitle','$level','$title','$spage','$epage','')");
 	$sth2->execute();

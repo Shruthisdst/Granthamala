@@ -6,7 +6,7 @@ $pwd = $ARGV[3];
 
 use DBI();
 
-open(IN,"GRM_bookid.xml") or die "can't open GRM_bookid.xml\n";
+open(IN,"grm_books.xml") or die "can't open grm_books.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
@@ -65,6 +65,7 @@ while($line)
 		if($5 ne "")
 		{
 			($edition,$volume,$part,$book_id) = split(/:/,$5);
+			#~ print 'Book->' . $book_id . "\n";
 		}
 		else
 		{
