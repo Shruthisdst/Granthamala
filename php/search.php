@@ -54,8 +54,8 @@
 								 <tr>
 									<td class="left">&nbsp;</td>
 									<td class="submit">
-										<input name="button1" type="submit" class="titlespan" id="button" value="Submit"/>
-										<input name="button2" type="reset" class="titlespan" id="button2" value="Clear"/>
+										<input name="button1" type="submit" class="titlespan" id="button" value="ಹುಡುಕಿ"/>
+										<input name="button2" type="reset" class="titlespan" id="button2" value="ಅಳಿಸಿ"/>
 									</td>
 								</tr>
 							</table>
