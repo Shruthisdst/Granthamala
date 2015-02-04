@@ -5,7 +5,7 @@ db="Granthamala"
 usr="root"
 pwd="mysql"
 
-echo "drop database Granthamala; create database Granthamala;" | /usr/bin/mysql -uroot -pmysql
+echo "drop database if exists Granthamala; create database Granthamala;" | /usr/bin/mysql -uroot -pmysql
 
 
 perl GRM_author.pl $host $db $usr $pwd
