@@ -35,17 +35,10 @@ include("connect.php");
 $bl = $_POST['bl'];
 $toc_title = $_POST['text'];
 
-try
-{
-    $db = new PDO("mysql:host=localhost;dbname=".$database.";charset=utf8", $user, $password);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
-{
-    echo $e->getMessage();
-    die();
-}
+$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
+$rs = mysql_select_db($database,$db) or die("No Database");
 
+mysql_set_charset("utf8");
 
 $toc_title = rtrim($toc_title);
 $toc_title = preg_replace("/[ ]+/", " ", $toc_title);
@@ -82,7 +75,7 @@ if($bl == "toctitle")
 	}
 	$toctitle = $text1;
     #echo $toctitle;
-    $query = $db->query("select * from GM_Toc where title REGEXP '$toctitle|$toc_title'");
+    $query = "select * from GM_Toc where title REGEXP '$toctitle|$toc_title'";
     #echo $query;
 }
 
@@ -93,33 +86,38 @@ if($bl == "btitle")
     $book = preg_replace("/ $/", "", $book);
     $book = preg_replace("/^ /", "", $book);
 
-    $query = $db->query("select distinct btitle, book_id from GM_Toc where btitle REGEXP '$book'");
+    $query = "select distinct btitle, book_id from GM_Toc where btitle REGEXP '$book'";
     #echo $query;
 }
-
+$result = mysql_query($query);
+$num_rows = ($result)? mysql_num_rows($result): 0;
 $b_id = 0;
 $book_title = 1;
-
-$count = $query->rowCount();
-if($count)
+if ($num_rows > 0)
 {
-    echo "<span class=\"search-result\">ಫಲಿತಾಂಶಗಳು &#8212;&nbsp;".$count."</span>";
-
-    echo "<ul class=\"book_list\">";
-    while($row = $query->fetch(PDO::FETCH_OBJ))
+	echo "<span class=\"search-result\">ಫಲಿತಾಂಶಗಳು &#8212; $num_rows</span>";
+}
+if($num_rows)
+{
+	echo "<ul class=\"book_list\">";
+    for($i=1;$i<=$num_rows;$i++)
     {
+		$row = mysql_fetch_assoc($result);
         if($bl == "btitle")
         {
-            $book_id = $row->book_id;
-            $btitle = $row->btitle;
-
+            $book_id = $row['book_id'];
+            $btitle = $row['btitle'];
             
-            $query1 = $db->query("select * from GM_Toc where book_id = $book_id");
-            while($row1 = $query1->fetch(PDO::FETCH_OBJ))
+            $query1 = "select * from GM_Toc where book_id = $book_id";
+            $result1 = mysql_query($query1);
+            $num_rows1 = mysql_num_rows($result1);
+			for($j=1;$j<=$num_rows1;$j++)
             {
-                $title = $row1->title;
-                $level = $row1->level;
-                $pages = $row1->start_pages;
+                $row1 = mysql_fetch_assoc($result1);
+                
+                $title = $row1['title'];
+                $level = $row1['level'];
+                $pages = $row1['start_pages'];
 
                 $btitle = preg_replace('/-/'," &ndash; ", $btitle);
                 $btitle = preg_replace("/$book/", "<span style=\"color: red\">$book</span>", $btitle);
@@ -142,11 +140,11 @@ if($count)
         }
         elseif($bl == "toctitle")
         {
-            $book_id = $row->book_id;
-            $btitle = $row->btitle;
-            $title = $row->title;
-            $level = $row->level;
-            $pages = $row->start_pages;
+            $book_id = $row['book_id'];
+            $btitle = $row['btitle'];
+            $title = $row['title'];
+            $level = $row['level'];
+            $pages = $row['start_pages'];
             
             $btitle = preg_replace('/-/'," &ndash; ", $btitle);
             $title = preg_replace('/-/'," &ndash; ", $title);

@@ -31,16 +31,9 @@ include("connect.php");
 
 $book_id = $_GET['book_id'];
 
-try
-{
-    $db = new PDO("mysql:host=localhost;dbname=".$database.";charset=utf8", $user, $password);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
-{
-    echo $e->getMessage();
-    die();
-}
+$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
+$rs = mysql_select_db($database,$db) or die("No Database");
+mysql_set_charset("utf8");
 
 $stack = array();
 $p_stack = array();
@@ -53,18 +46,21 @@ $plus_link = "<img src=\"images/plus.gif\" alt=\"\" onclick=\"display_block(this
 //$plus_link = "<a href=\"#\" onclick=\"display_block(this)\"><img src=\"plus.gif\" alt=\"\"></a>";
 $bullet = "<img src=\"images/bullet_1.gif\" alt=\"\" />";
 
-$query = $db->query("select * from GM_Toc where book_id='$book_id'");
-$count = $query->rowCount();
-if($count)
+$query = "select * from GM_Toc where book_id='$book_id'";
+$result = mysql_query($query);
+$num_rows = mysql_num_rows($result);
+
+if($num_rows)
 {
     echo "<div class=\"treeview\">";
-    while($row = $query->fetch(PDO::FETCH_OBJ))
-    {
-        $book_id = $row->book_id;
-        $btitle = $row->btitle;
-        $title = $row->title;
-        $level = $row->level;
-        $pages = $row->start_pages;
+    for($i=1;$i<=$num_rows;$i++)
+	{
+		$row = mysql_fetch_assoc($result);
+        $book_id = $row['book_id'];
+		$btitle = $row['btitle'];
+		$title = $row['title'];
+		$level = $row['level'];
+		$pages = $row['start_pages'];
            
         $btitle = preg_replace('/-/'," &ndash; ", $btitle);
         $btitle = preg_replace('/—/'," &mdash; ", $btitle);
@@ -130,10 +126,7 @@ if($count)
     }
     echo "</div>";
 }
-else
-{
-	echo"<div class=\"goback\">ಫಲಿತಾಂಶಗಳು ಲಭ್ಯವಿಲ್ಲ</div>";
-}
+
 function display_stack($stack)
 {
 	for($j=0;$j<sizeof($stack);$j++)
