@@ -19,6 +19,7 @@ $sth1=$dbh->prepare("CREATE TABLE GM_Toc(
 book_id varchar(4),
 btitle varchar(2000),
 ctitle varchar(2000),
+cid int(20),
 level int(2),
 title varchar(10000),
 start_pages varchar(20),
@@ -35,25 +36,27 @@ while($line)
 {
 	chop($line);
 	
-	if($line =~ /<book code="(.*)"[\s]+btitle="(.*)"[\s]ctitle="(.*)"><\/book>/)
+	if($line =~ /<book code="(.*)"[\s]+btitle="(.*)"[\s]ctitle="(.*)"[\s]cid="(.*)"><\/book>/)
 	{
 		$book_id = $1;
 		$btitle = $2;
 		$ctitle = $3;
+		$cid = $4;
         #print $book_id ."\n";
-        if($line =~ /<book code="(.*)"[\s]+btitle="ಂಇಸಿ"[\s]+ctitle="ಂಇಸಿ"><\/book>/)
+        if($line =~ /<book code="(.*)"[\s]+btitle="ಂಇಸಿ"[\s]+ctitle="ಂಇಸಿ"[\s]cid="(.*)"><\/book>/)
         {
         }
         else
         {
-            insert_to_db($book_id,$btitle,$ctitle);
+            insert_to_db($book_id,$btitle,$ctitle,$cid);
         }
 	}
-    elsif($line =~ /<book code="(.*)"[\s]+btitle="(.*)"[\s]+ctitle="(.*)">/)
+    elsif($line =~ /<book code="(.*)"[\s]+btitle="(.*)"[\s]+ctitle="(.*)"[\s]cid="(.*)">/)
 	{
 		$book_id = $1;
 		$btitle = $2;
         $ctitle = $3;
+        $cid = $4;
 
         #print $book_id."\n";
 	}
@@ -104,7 +107,7 @@ while($line)
         }
         #print $spage."-".$epage."\n";
 
-		insert_to_db($book_id,$btitle,$ctitle,$level,$title,$spage,$epage);
+		insert_to_db($book_id,$btitle,$ctitle,$cid,$level,$title,$spage,$epage);
 		$title =  "";
 		$level = "";
 		$spage = "";
@@ -143,7 +146,7 @@ while($line)
         
         #print $spage ."\n"; 
 
-		insert_to_db($book_id,$btitle,$ctitle,$level,$title,$spage);
+		insert_to_db($book_id,$btitle,$ctitle,$cid,$level,$title,$spage);
 		$title =  "";
 		$level = "";
 		$spage = "";
@@ -165,7 +168,7 @@ close(IN);
 
 sub insert_to_db()
 {
-	my($book_id,$btitle,$ctitle,$level,$title,$spage,$epage) = @_;
+	my($book_id,$btitle,$ctitle,$cid,$level,$title,$spage,$epage) = @_;
 	my($sth2);
 
 	$btitle =~ s/'/\\'/g;
@@ -173,7 +176,7 @@ sub insert_to_db()
     
     #~ print 'TOC->' . $book_id . "\n";
     
-	$sth2=$dbh->prepare("insert into GM_Toc values('$book_id','$btitle','$ctitle','$level','$title','$spage','$epage','')");
+	$sth2=$dbh->prepare("insert into GM_Toc values('$book_id','$btitle','$ctitle','$cid','$level','$title','$spage','$epage','')");
 	$sth2->execute();
 	$sth2->finish();
 }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
+	<title>ಗ್ರಂಥಮಾಲಾ</title>
+</head>
+
+<body>
+	<div class="page">
+        <div class="header">
+            <ul class="nav">
+                <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
+				<li>|</li>
+                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
+				<li>|</li>
+                <li><a class="active nav_kan" href="#">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
+				<li>|</li>
+                <li><a class="nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
+				<li>|</li>
+                <li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
+            </ul>
+        </div>
+        <div class="heading">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ   ಗ್ರಂಥರತ್ನಮಾಲಾ</div>
+        <div class="mainbody">
+            <ul class="anuvada">
+                <li><span  class="authname">ಶ್ರೀ ಚನ್ನಕೇಶವಯ್ಯ ಬಿ.</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_26.html">ಭವಿಷ್ಯ ಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಪಾಟಣಕರ ಚಂದ್ರಶೇಖರ ಭಟ್ಟ</span><br />
+                    <span class="purana_name"><a href="granthagalu_11.html">ಬ್ರಹ್ಮಾಂಡಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_30.html">ಕೂರ್ಮ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_42.html">ಮಾರ್ಕಂಡೇಯ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_7.html">ದೇವ್ಯುಪನಿಷನ್ಮಾಲಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_12.html">ಕಾಂಚೀಮಾಹಾತ್ಮ್ಯಂ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_44.html">ವರಿವಸ್ಯಾ ರಹಸ್ಯಂ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_46.html">ವನದುರ್ಗೋಪನಿಷತ್‍</a>
+                    </span>
+                </li>
+                
+                <li><span  class="authname">ಶ್ರೀ ಬೆಟ್ಟದಪುರದ ಸುಬ್ರಾಯರ ಮಗ ಕೃಷ್ಣಪ್ಪ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_38.html"> ಶ್ರೀ ಬ್ರಹ್ಮವೈವರ್ತ ಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+                
+                <li><span  class="authname">ಶ್ರೀ ಹಾನಗಲ್ ಯಜ್ಞೇಶ್ವರ ಶಾಸ್ತ್ರಿ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_41.html"> ಶ್ರೀ ಗಣೇಶ ಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ವಾಜಪೇಯಂ ಶ್ರೀರಂಗಾಚಾರ್</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_24.html"> ಶ್ರೀ ಮತ್ಸ್ಯಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ದೊಡ್ಡಬಳ್ಳಾಪುರಂ ವಾಸುದೇವಾಚಾರ್ಯ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_29.html">ನಾರದೀಯ ಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಪದ್ಮನಾಭಾಚಾರ್ಯರು ನಾ. ವಾ.</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_39.html">ನರಸಿಂಹ ಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಬೇಲದಕೆರೆ ಸೂರ್ಯನಾರಾಯಣ ಶಾಸ್ತ್ರಿ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_10.html">ಪದ್ಮ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_19.html">ಅದ್ಭುತರಾಮಾಯಣಂ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_32.html">ಆನಂದರಾಮಾಯಣಂ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_36.html">ಶ್ರೀಮದಧ್ಯಾತ್ಮರಾಮಾಯಣಂ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಗಂಗಾಧರ ಶಾಸ್ತ್ರಿ ಹೆಚ್.</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_2.html">ಶ್ರೀ ಶಿವಗೀತಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_1.html">ಶ್ರೀ ಗುರುಗೀತಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_33.html">ಶ್ರೀ ಸಾಂಬ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_16.html">ಶ್ರೀ ಸೌರ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_23.html">ಶ್ರೀ ಶಿವರಹಸ್ಯ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಸೇತುಮಾಧವಾಚಾರ್ ಆರ್. </span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_28.html">ಶ್ರೀಮದ್ವಾಯು ಮಹಾಪುರಾಣಂ</a>
+                    </span>
+                </li>
+                <li><span  class="authname">ಶ್ರೀ ಸಂಕೀಘಟ್ಟಂ ವೆಂಕಟಾಚಾರ್ಯ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_17.html">ವಾಮನ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_9.html"> ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಗಂಜಾಂ ತಿಮ್ಮಣ್ಣಯ್ಯ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_37.html">ವಿಷ್ಣು ಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಎಡತೊರೆ ಚಂದ್ರಶೇಖರ ಶಾಸ್ತ್ರಿ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_27.html">ಶ್ರೀ ಕಲ್ಕಿ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_31.html">ಆದಿಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_13.html">ಶ್ರೀ ಲಿಂಗಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_4.html">ಪಂಚೋಪನಿಷದಃ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_5.html">ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_15.html">ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_18.html">ಶ್ರೀ ತ್ರಿಪುರಾರಹಸ್ಯ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಹಾಸನದ ಪಂಡಿತ ವೆಂಕಟರಾವ್ </span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_6.html">ಶ್ರೀ ಕಾಲಿಕಾ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_21.html">ಬ್ರಹ್ಮ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_14.html">ಶಿವಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_34.html">ಗಾರ್ಗ್ಯಸಂಹಿತಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_35.html">ಶಂಕರಸಂಹಿತಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_45.html">ಋಗ್ವೇದಸಂಹಿತಾ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಚಾ.ನಗರದ ವೆಂಕಟರಮಣ ಶಾಸ್ತ್ರಿ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_9.html">ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ವರದಾಚಾರ್ಯ ಮ. ರ. </span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_22.html">ಶ್ರೀ ವರಾಹಮಹಾಪುರಾಣ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಮೋಟಗಾನಹಳ್ಳಿ ಸುಬ್ರಹ್ಮಣ್ಯ ಶಾಸ್ತ್ರೀ</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_8.html">ಶ್ರೀ ಸ್ಕಾಂದಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_43.html"> ಶ್ರೀ ಲಲಿತೋಪಾಖ್ಯಾನಂ</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಸಿದ್ಧಲಿಂಗಸ್ವಾಮಿಗಳವರು </span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_3.html">ಶ್ರೀಮತ್ಕೌಮಾರಭಾಷ್ಯೋಪೇತಾ ಶ್ರೀಮಚ್ಛಿಲ್ಪವಿದ್ಯಾರಹಸ್ಯೋಪನಿಷತ್‍</a>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಸೀತಾರಾಮಶಾಸ್ತ್ರೀ ಎಸ್.</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_20.html">ಶ್ರೀ ಹಾಲಾಸ್ಯ ಮಾಹಾತ್ಮ್ಯಂ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu_40.html">ಶಿವತತ್ತ್ವಸುಧಾನಿಧಿಃ</a>
+                    </span>
+                </li>
+                
+                <li><span  class="authname">ಶ್ರೀ ದೇವುಡು</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_25.html">ಯೋಗವಾಸಿಷ್ಠ</a>
+                    </span>
+                </li>
+                
+                <li><span  class="authname">ಶ್ರೀ ಮಣಿಕುಂಡಲಂ ವೆಂಕಟೇಶ ಶಾಸ್ತ್ರೀ ಎಸ್.</span><br />
+                    <span class="purana_name">
+                        <a href="granthagalu_25.html">ಯೋಗವಾಸಿಷ್ಠ</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+			<div class="terms"><p><a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Contact Us</a></p></div>
+			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Copyright &copy; Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
+        </div>
+    </div>
+</body>
+</html>
