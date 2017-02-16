@@ -9,7 +9,7 @@ for($i=1;$i<=$num_rows;$i++)
 {
 	$row = $result->fetch_assoc();
 	$book_id = $row['book_id'];
-	$filename = "html/treeview_" . $book_id . ".html";
+	$filename = "html/toc_" . $book_id . ".html";
 	$cmd = 'wget "http://localhost/grm/html/treeview.php?book_id=' . $book_id . '" --output-document=' . $filename . ' --quiet';
 	system($cmd);
 }

@@ -44,8 +44,8 @@
 				<div class="keys tline" id="ra" onclick="InsertText('ರ')">ರ</div>
 				<div class="keys tline" id="la" onclick="InsertText('ಲ')">ಲ</div>
 				<div class="keys tline" id="va" onclick="InsertText('ವ')">ವ</div>
-				<div class="keys tline" id="Sa" onclick="InsertText('ಷ')">ಷ</div>
 				<div class="keys tline" id="sha" onclick="InsertText('ಶ')">ಶ</div>
+				<div class="keys tline" id="Sa" onclick="InsertText('ಷ')">ಷ</div>
 				<div class="keys tline" id="sa" onclick="InsertText('ಸ')">ಸ</div>
 				<div class="keys lline" id="ha" style="border-bottom: none;" onclick="InsertText('ಹ')">ಹ</div>
 				<div class="keys" id="La" style="border-bottom: none;" onclick="InsertText('ಳ')">ಳ</div>

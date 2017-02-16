@@ -63,7 +63,7 @@ if($num_rows)
 
 			if($ctitle != $btitle)
 			{
-				echo "\n<li class=\"book_title\"><a href=\"granthagalu_" . $cid .".html\">$ctitle&nbsp;(<span style=\"font-size: 0.85em;\">$volume_count</span>&nbsp;ಸಂಪುಟಗಳು)</a></li>";
+				echo "\n<li class=\"book_title\"><a href=\"volume_" . $cid .".html\">$ctitle&nbsp;(<span style=\"font-size: 0.85em;\">$volume_count</span>&nbsp;ಸಂಪುಟಗಳು)</a></li>";
 			}
 			else
 			{
@@ -73,7 +73,7 @@ if($num_rows)
 				}
 				else
 				{
-					echo "\n<li class=\"book_title\"><a href=\"treeview_$book_id.html\">$btitle</a></li>";
+					echo "\n<li class=\"book_title\"><a href=\"toc_$book_id.html\">$btitle</a></li>";
 				}
 			}
 		}

@@ -63,7 +63,7 @@ if($num_rows)
 			}
 			else
 			{
-				echo "\n<li class=\"book_title\"><a href=\"treeview_$book_id.html\">$btitle</a></li>";
+				echo "\n<li class=\"book_title\"><a href=\"toc_$book_id.html\">$btitle</a></li>";
 			}
 		}
     }

@@ -14,13 +14,13 @@
 	<div class="page">
         <div class="header">
             <ul class="nav">
-                <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
+                <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="about.php">ಒಳನೋಟ</a></li>
+                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="anuvadakaru.php">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
+                <li><a class="nav_kan" href="anuvadakaru.html">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="purana_list.php">ಸಂಗ್ರಹ</a></li>
+                <li><a class="nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
 				<li>|</li>
                 <li><a class="active nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
             </ul>

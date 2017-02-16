@@ -10,7 +10,7 @@ for($i=1;$i<=$num_rows;$i++)
 	$row = $result->fetch_assoc();
 	$ctitle = $row['ctitle'];
 	$cid = $row['cid'];
-	$filename = "html/granthagalu_" . $cid . ".html";
+	$filename = "html/volume_" . $cid . ".html";
 	$cmd = 'wget "http://localhost/grm/html/granthagalu.php?cid=' . $cid . '" --output-document=' . $filename . ' --quiet';
 	system($cmd);
 }

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+rm html/toc*.html
+rm html/volume*.html
+
 php gen_about.php
 php gen_ananta.php
 php gen_nagaraj.php
