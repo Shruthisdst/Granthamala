@@ -5,7 +5,7 @@
 	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />    
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>    
-	<title>ಗ್ರಂಥಮಾಲಾ</title>
+	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
 </head>
 
 <body>
@@ -13,6 +13,8 @@
         <div class="header">
             <ul class="nav">
                 <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
+				<li>|</li>
+				<li><a class="nav_kan" href="granthamala.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="about.php">ಒಳನೋಟ</a></li>
 				<li>|</li>
