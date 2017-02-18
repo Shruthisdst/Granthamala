@@ -6,7 +6,7 @@
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/treeview.js"></script>   
-	<title>ಗ್ರಂಥಮಾಲಾ</title>
+	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
 </head>
 
 <body>
@@ -15,7 +15,9 @@
             <ul class="nav">
                 <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
+				<li><a class="nav_kan" href="granthamala.html">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+				<li>|</li>
+				<li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="anuvadakaru.html">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
 				<li>|</li>

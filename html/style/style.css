@@ -433,3 +433,25 @@ input[type=submit], input[type=reset]{
 input[type=text]{
 	padding: 5px 0px 5px 5px;
 }
+.imgOverlay{
+	position: relative; 
+    margin: auto;
+}
+.imgOverlay .text{
+	font-size: 1.7em;
+	text-align: center;
+	position: absolute;
+	top: 15.6em;
+	left: 11em;
+	width: 300px;
+	color: #660000;
+}
+.imgOverlay .rigveda{
+	font-size: 1.4em;
+	text-align: center;
+	position: absolute;
+	top: 26em;
+	left: 13.2em;
+	width: 300px;
+	color: #660000;
+}

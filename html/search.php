@@ -5,20 +5,22 @@
 	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />    
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>    
-	<title>ಗ್ರಂಥಮಾಲಾ</title>
+	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
 </head>
 
 <body>
 	<div class="page">
         <div class="header">
             <ul class="nav">
-                <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
+                <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
+				<li><a class="nav_kan" href="granthamala.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="anuvadakaru.html">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
+                <li><a class="nav_kan" href="about.php">ಒಳನೋಟ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
+                <li><a class="nav_kan" href="anuvadakaru.php">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
+				<li>|</li>
+                <li><a class="nav_kan" href="purana_list.php">ಸಂಗ್ರಹ</a></li>
 				<li>|</li>
                 <li><a class="active nav_kan" href="#">ಹುಡುಕಿ</a></li>
             </ul>
@@ -66,7 +68,7 @@
         </div>
         <div id="footer">
 			<div class="terms"><p><a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Contact Us</a></p></div>
-			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Copyright &copy; Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
+			<div class="copyright"><p><a href="http://www.srirangadigital.com">Copyright &copy; Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
         </div>
     </div>
 </body>
