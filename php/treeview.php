@@ -157,7 +157,7 @@ function display_tabs($num)
         </div>
         <div id="footer">
 			<div class="terms"><p><a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Contact Us</a></p></div>
-			<div class="copyright"><p><a href="http://www.srirangadigital.com">Copyright &copy; Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
+			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Copyright &copy; Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
         </div>
     </div>
 </body>
