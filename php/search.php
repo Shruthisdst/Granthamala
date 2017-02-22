@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />    
+	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>    
+	<link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>
 	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
 </head>
 
@@ -68,7 +69,7 @@
         </div>
         <div id="footer">
 			<div class="terms"><p><a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Contact Us</a></p></div>
-			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Copyright &copy; Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
+			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Digitized by Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
         </div>
     </div>
 </body>
