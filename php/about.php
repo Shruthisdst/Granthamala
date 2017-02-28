@@ -33,7 +33,6 @@
                         ಗ್ರಂಥಲೋಕ  ನಿಯತ ಕಾಲಿಕೆಯಲ್ಲಿ ಏಪ್ರಿಲ್  1985ರಲ್ಲಿ ಪ್ರಕಟವಾದ&nbsp;&nbsp;<span class="auth_name"><a href="ananta.php">ಡಾ|| ಎನ್. ಅನಂತರಂಗಾಚಾರ್ </a></span>ಹಾಗೂ <span class="auth_name"><a href="nagaraj.php">ಡಾ|| ಎಚ್.ವಿ. ನಾಗರಾಜರಾವ್ </a></span>ಅವರ ಲೇಖನಗಳು ಇಲ್ಲಿವೆ.</p>
 		</div>
         <div id="footer">
-			<div class="terms"><p><a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Contact Us</a></p></div>
 			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Digitized by Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
         </div>
     </div>
