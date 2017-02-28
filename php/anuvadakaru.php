@@ -102,7 +102,8 @@
                 <li><span  class="authname">ಶ್ರೀ ಸಂಕೀಘಟ್ಟಂ ವೆಂಕಟಾಚಾರ್ಯ</span><br />
                     <span class="purana_name">
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ವಾಮನಪುರಾಣ">ವಾಮನ ಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ವಿಷ್ಣುಧರ್ಮೋತ್ತರ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ</a>
+						ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ 
+						<span class="smallFont">(ದ್ವಿತೀಯಖಂಡ: <a href="treeview.php?book_id=054">ಭಾಗ-3</a>, <a href="treeview.php?book_id=055">ಭಾಗ-4</a>. ತೃತೀಯಖಂಡ: <a href="treeview.php?book_id=056">ಭಾಗ-1</a>, <a href="treeview.php?book_id=057">ಭಾಗ-2</a>, <a href="treeview.php?book_id=058">ಭಾಗ-3</a>)</span>
                     </span>
                 </li>
 
@@ -137,7 +138,9 @@
 
                 <li><span  class="authname">ಶ್ರೀ ಚಾ.ನಗರದ ವೆಂಕಟರಮಣ ಶಾಸ್ತ್ರಿ</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ವಿಷ್ಣುಧರ್ಮೋತ್ತರ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ</a>
+						ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ
+						<span class="smallFont">(ಪ್ರಥಮಖಂಡ: <a href="treeview.php?book_id=047">ಭಾಗ-1</a>, <a href="treeview.php?book_id=048">ಭಾಗ-2</a>, <a href="treeview.php?book_id=049">ಭಾಗ-3</a>, <a href="treeview.php?book_id=050">ಭಾಗ-4</a>, <a href="treeview.php?book_id=051">ಭಾಗ-5</a>.
+						ದ್ವಿತೀಯಖಂಡ: <a href="treeview.php?book_id=052">ಭಾಗ-1</a>, <a href="treeview.php?book_id=053">ಭಾಗ-2</a>)</span>
                     </span>
                 </li>
 
@@ -169,13 +172,13 @@
                 
                 <li><span  class="authname">ಶ್ರೀ ದೇವುಡು</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಯೋಗವಾಸಿಷ್ಠ">ಯೋಗವಾಸಿಷ್ಠ</a>
+						ಯೋಗವಾಸಿಷ್ಠ <span class="smallFont">(ಸಂಪುಟಗಳು: <a href="treeview.php?book_id=172">1</a>, <a href="treeview.php?book_id=173">2</a>, <a href="treeview.php?book_id=174">3</a>, <a href="treeview.php?book_id=175">4</a>, <a href="treeview.php?book_id=181">10</a>, <a href="treeview.php?book_id=185">14</a>, <a href="treeview.php?book_id=186">15</a>, <a href="treeview.php?book_id=187">16</a>, <a href="treeview.php?book_id=188">17</a>, <a href="treeview.php?book_id=189">18</a>, <a href="treeview.php?book_id=190">19</a>, <a href="treeview.php?book_id=191">20</a>, <a href="treeview.php?book_id=192">21</a>)</span>
                     </span>
                 </li>
                 
                 <li><span  class="authname">ಶ್ರೀ ಮಣಿಕುಂಡಲಂ ವೆಂಕಟೇಶ ಶಾಸ್ತ್ರೀ ಎಸ್.</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಯೋಗವಾಸಿಷ್ಠ">ಯೋಗವಾಸಿಷ್ಠ</a>
+						ಯೋಗವಾಸಿಷ್ಠ <span class="smallFont">(ಸಂಪುಟಗಳು: <a href="treeview.php?book_id=176">5</a>, <a href="treeview.php?book_id=177">6</a>, <a href="treeview.php?book_id=178">7</a>, <a href="treeview.php?book_id=179">8</a>, <a href="treeview.php?book_id=180">9</a>, <a href="treeview.php?book_id=182">11</a>, <a href="treeview.php?book_id=183">12</a>, <a href="treeview.php?book_id=184">13</a>)</span>
                     </span>
                 </li>
             </ul>
