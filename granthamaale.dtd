@@ -2,6 +2,8 @@
 <!ELEMENT book (s1*)>
 <!ATTLIST book code CDATA #REQUIRED>
 <!ATTLIST book btitle CDATA #REQUIRED>
+<!ATTLIST book ctitle CDATA #REQUIRED>
+<!ATTLIST book cid CDATA #REQUIRED>
 <!ELEMENT s1 (s2*)>
 <!ATTLIST s1 title CDATA #REQUIRED>
 <!ATTLIST s1 page CDATA #REQUIRED>

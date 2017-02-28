@@ -7,7 +7,7 @@ $pwd = $ARGV[3];
 
 use DBI();
 
-open(IN,"grm_books_toc.xml") or die "can't open grm_books_toc.xml\n";
+open(IN,"GRM_toc_uni.xml") or die "can't open GRM_toc_uni.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
