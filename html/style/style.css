@@ -106,10 +106,17 @@ body{
     text-align: center;
     padding-top: 1em;
 }
-.anuvada li .purana_name a{
+.anuvada li .purana_name{
     color: #800000;
     font-size: 0.9em;
 }
+.anuvada li .purana_name a{
+    color: #800000;
+}
+.smallFont{
+	font-size: 14.4px;
+}
+
 .book_title .author_name{
     color: #800000;
 }

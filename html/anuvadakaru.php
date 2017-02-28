@@ -12,15 +12,15 @@
 	<div class="page">
         <div class="header">
             <ul class="nav">
-                <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
+                <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-				<li><a class="nav_kan" href="granthamala.html">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+				<li><a class="nav_kan" href="granthamala.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
+                <li><a class="nav_kan" href="about.php">ಒಳನೋಟ</a></li>
 				<li>|</li>
                 <li><a class="active nav_kan" href="#">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
+                <li><a class="nav_kan" href="purana_list.php">ಸಂಗ್ರಹ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
             </ul>
@@ -38,10 +38,10 @@
                     <span class="purana_name"><a href="granthagalu.php?ctitle=ಬ್ರಹ್ಮಾಂಡಪುರಾಣ">ಬ್ರಹ್ಮಾಂಡಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಕೂರ್ಮ%20ಪುರಾಣ">ಕೂರ್ಮ ಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಮಾರ್ಕಂಡೇಯ%20ಪುರಾಣ">ಮಾರ್ಕಂಡೇಯ ಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ದೇವ್ಯುಪನಿಷನ್ಮಾಲಾ">ದೇವ್ಯುಪನಿಷನ್ಮಾಲಾ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಕಾಂಚೀಮಾಹಾತ್ಮ್ಯಂ">ಕಾಂಚೀಮಾಹಾತ್ಮ್ಯಂ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ವರಿವಸ್ಯಾ%20ರಹಸ್ಯಂ">ವರಿವಸ್ಯಾ ರಹಸ್ಯಂ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ವನದುರ್ಗೋಪನಿಷತ್‍">ವನದುರ್ಗೋಪನಿಷತ್‍</a>
+                        <a href="treeview.php?book_id=016">ದೇವ್ಯುಪನಿಷನ್ಮಾಲಾ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=086">ಕಾಂಚೀಮಾಹಾತ್ಮ್ಯಂ</a>&nbsp;;&nbsp;
+                        <a href="../Volumes/285/index.djvu" target="_blank">ವರಿವಸ್ಯಾ ರಹಸ್ಯಂ</a>&nbsp;;&nbsp;
+                        <a href="../Volumes/324/index.djvu" target="_blank">ವನದುರ್ಗೋಪನಿಷತ್‍</a>
                     </span>
                 </li>
                 
@@ -78,7 +78,7 @@
                 <li><span  class="authname">ಶ್ರೀ ಬೇಲದಕೆರೆ ಸೂರ್ಯನಾರಾಯಣ ಶಾಸ್ತ್ರಿ</span><br />
                     <span class="purana_name">
                         <a href="granthagalu.php?ctitle=ಪದ್ಮಮಹಾಪುರಾಣ">ಪದ್ಮ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಅದ್ಭುತರಾಮಾಯಣಂ">ಅದ್ಭುತರಾಮಾಯಣಂ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=120">ಅದ್ಭುತರಾಮಾಯಣಂ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಆನಂದರಾಮಾಯಣಂ">ಆನಂದರಾಮಾಯಣಂ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀಮದಧ್ಯಾತ್ಮರಾಮಾಯಣಂ"> ಶ್ರೀಮದಧ್ಯಾತ್ಮರಾಮಾಯಣಂ</a>
                     </span>
@@ -86,8 +86,8 @@
 
                 <li><span  class="authname">ಶ್ರೀ ಗಂಗಾಧರ ಶಾಸ್ತ್ರಿ ಹೆಚ್. </span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಶಿವಗೀತಾ">ಶ್ರೀ ಶಿವಗೀತಾ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಗುರುಗೀತಾ"> ಶ್ರೀ ಗುರುಗೀತಾ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=002">ಶ್ರೀ ಶಿವಗೀತಾ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=001"> ಶ್ರೀ ಗುರುಗೀತಾ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀಸಾಂಬಪುರಾಣ"> ಶ್ರೀ ಸಾಂಬ ಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಸೌರಪುರಾಣ"> ಶ್ರೀ ಸೌರ ಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಶಿವರಹಸ್ಯ "> ಶ್ರೀ ಶಿವರಹಸ್ಯ</a>
@@ -102,7 +102,8 @@
                 <li><span  class="authname">ಶ್ರೀ ಸಂಕೀಘಟ್ಟಂ ವೆಂಕಟಾಚಾರ್ಯ</span><br />
                     <span class="purana_name">
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ವಾಮನಪುರಾಣ">ವಾಮನ ಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ವಿಷ್ಣುಧರ್ಮೋತ್ತರ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ</a>
+						ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ 
+						<span class="smallFont">(ದ್ವಿತೀಯಖಂಡ: <a href="treeview.php?book_id=054">ಭಾಗ-3</a>, <a href="treeview.php?book_id=055">ಭಾಗ-4</a>. ತೃತೀಯಖಂಡ: <a href="treeview.php?book_id=056">ಭಾಗ-1</a>, <a href="treeview.php?book_id=057">ಭಾಗ-2</a>, <a href="treeview.php?book_id=058">ಭಾಗ-3</a>)</span>
                     </span>
                 </li>
 
@@ -114,10 +115,10 @@
 
                 <li><span  class="authname">ಶ್ರೀ ಎಡತೊರೆ ಚಂದ್ರಶೇಖರ ಶಾಸ್ತ್ರಿ</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಕಲ್ಕಿಪುರಾಣಂ"> ಶ್ರೀ ಕಲ್ಕಿ ಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಆದಿಪುರಾಣಂ">ಆದಿಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=206"> ಶ್ರೀ ಕಲ್ಕಿ ಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=227">ಆದಿಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಲಿಂಗಮಹಾಪುರಾಣ"> ಶ್ರೀ ಲಿಂಗಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಪಂಚೋಪನಿಷದಃ">ಪಂಚೋಪನಿಷದಃ</a>&nbsp;;&nbsp;
+                        <a href="treeview.php?book_id=004">ಪಂಚೋಪನಿಷದಃ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀದೇವೀಭಾಗವತಂ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ"> ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ತ್ರಿಪುರಾರಹಸ್ಯ"> ಶ್ರೀ ತ್ರಿಪುರಾರಹಸ್ಯ</a>
@@ -137,7 +138,9 @@
 
                 <li><span  class="authname">ಶ್ರೀ ಚಾ.ನಗರದ ವೆಂಕಟರಮಣ ಶಾಸ್ತ್ರಿ</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ವಿಷ್ಣುಧರ್ಮೋತ್ತರ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ</a>
+						ಶ್ರೀ ವಿಷ್ಣುಧರ್ಮೋತ್ತರ ಮಹಾಪುರಾಣ
+						<span class="smallFont">(ಪ್ರಥಮಖಂಡ: <a href="treeview.php?book_id=047">ಭಾಗ-1</a>, <a href="treeview.php?book_id=048">ಭಾಗ-2</a>, <a href="treeview.php?book_id=049">ಭಾಗ-3</a>, <a href="treeview.php?book_id=050">ಭಾಗ-4</a>, <a href="treeview.php?book_id=051">ಭಾಗ-5</a>.
+						ದ್ವಿತೀಯಖಂಡ: <a href="treeview.php?book_id=052">ಭಾಗ-1</a>, <a href="treeview.php?book_id=053">ಭಾಗ-2</a>)</span>
                     </span>
                 </li>
 
@@ -156,7 +159,7 @@
 
                 <li><span  class="authname">ಶ್ರೀ ಸಿದ್ಧಲಿಂಗಸ್ವಾಮಿಗಳವರು </span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀಮತ್ಕೌಮಾರಭಾಷ್ಯೋಪೇತಾ%20ಶ್ರೀಮಚ್ಛಿಲ್ಪವಿದ್ಯಾರಹಸ್ಯೋಪನಿಷತ್‍">ಶ್ರೀಮತ್ಕೌಮಾರಭಾಷ್ಯೋಪೇತಾ ಶ್ರೀಮಚ್ಛಿಲ್ಪವಿದ್ಯಾರಹಸ್ಯೋಪನಿಷತ್‍</a>
+                        <a href="treeview.php?book_id=003">ಶ್ರೀಮತ್ಕೌಮಾರಭಾಷ್ಯೋಪೇತಾ ಶ್ರೀಮಚ್ಛಿಲ್ಪವಿದ್ಯಾರಹಸ್ಯೋಪನಿಷತ್‍</a>
                     </span>
                 </li>
 
@@ -169,19 +172,18 @@
                 
                 <li><span  class="authname">ಶ್ರೀ ದೇವುಡು</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಯೋಗವಾಸಿಷ್ಠ">ಯೋಗವಾಸಿಷ್ಠ</a>
+						ಯೋಗವಾಸಿಷ್ಠ <span class="smallFont">(ಸಂಪುಟಗಳು: <a href="treeview.php?book_id=172">1</a>, <a href="treeview.php?book_id=173">2</a>, <a href="treeview.php?book_id=174">3</a>, <a href="treeview.php?book_id=175">4</a>, <a href="treeview.php?book_id=181">10</a>, <a href="treeview.php?book_id=185">14</a>, <a href="treeview.php?book_id=186">15</a>, <a href="treeview.php?book_id=187">16</a>, <a href="treeview.php?book_id=188">17</a>, <a href="treeview.php?book_id=189">18</a>, <a href="treeview.php?book_id=190">19</a>, <a href="treeview.php?book_id=191">20</a>, <a href="treeview.php?book_id=192">21</a>)</span>
                     </span>
                 </li>
                 
                 <li><span  class="authname">ಶ್ರೀ ಮಣಿಕುಂಡಲಂ ವೆಂಕಟೇಶ ಶಾಸ್ತ್ರೀ ಎಸ್.</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಯೋಗವಾಸಿಷ್ಠ">ಯೋಗವಾಸಿಷ್ಠ</a>
+						ಯೋಗವಾಸಿಷ್ಠ <span class="smallFont">(ಸಂಪುಟಗಳು: <a href="treeview.php?book_id=176">5</a>, <a href="treeview.php?book_id=177">6</a>, <a href="treeview.php?book_id=178">7</a>, <a href="treeview.php?book_id=179">8</a>, <a href="treeview.php?book_id=180">9</a>, <a href="treeview.php?book_id=182">11</a>, <a href="treeview.php?book_id=183">12</a>, <a href="treeview.php?book_id=184">13</a>)</span>
                     </span>
                 </li>
             </ul>
         </div>
         <div id="footer">
-			<div class="terms"><p><a href="#">Terms of Use</a>&nbsp;|&nbsp;<a href="#">Privacy Policy</a>&nbsp;|&nbsp;<a href="#">Contact Us</a></p></div>
 			<div class="copyright"><p><a href="http://www.srirangadigital.com" target="_blank">Digitized by Sriranga Digital Software Technologies Pvt. Ltd.</a></p></div>
         </div>
     </div>
