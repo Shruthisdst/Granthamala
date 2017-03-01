@@ -35,30 +35,25 @@ include("connect.php");
 
 $ctitle = $_GET['ctitle'];
 
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
-mysql_set_charset("utf8");
-
 $query = "select distinct book_id, btitle from GM_Toc where ctitle = '$ctitle'";
-$result = mysql_query($query);
-$num_rows = mysql_num_rows($result);
+$result = $db->query($query);
+$num_rows = $result ? $result->num_rows : 0;
 
-if($num_rows)
+if($num_rows > 0)
 {
 	echo "<ul>";
-	for($i=1;$i<=$num_rows;$i++)
+	while($row = $result->fetch_assoc())
 	{
-        $row = mysql_fetch_assoc($result);
 		$book_id = $row['book_id'];
         $btitle = $row['btitle'];
         $btitle = preg_replace('/-/'," &ndash; ", $btitle);
 
         $query1 = "select * from GM_Toc where book_id = '$book_id'";
-        $result1 = mysql_query($query1);
-        $num_rows1 = mysql_num_rows($result1);
-        if($num_rows1)
+        $result1 = $db->query($query1);
+        $num_rows1 = $result1 ? $result1->num_rows : 0;
+        if($num_rows1 > 0)
         {
-            $row1 = mysql_fetch_assoc($result1);
+            $row1 = $result1->fetch_assoc();
             $level = $row1['level'];
 			if($level == 0)
 			{
@@ -72,6 +67,8 @@ if($num_rows)
     }
     echo "</ul>";
 }
+if($result){$result->free();}
+$db->close();
 ?>
         </div>
         <div id="footer">

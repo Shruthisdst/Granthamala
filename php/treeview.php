@@ -34,10 +34,6 @@ include("connect.php");
 
 $book_id = $_GET['book_id'];
 
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
-mysql_set_charset("utf8");
-
 $stack = array();
 $p_stack = array();
 $first = 1;
@@ -50,15 +46,15 @@ $plus_link = "<img src=\"images/plus.gif\" alt=\"\" onclick=\"display_block(this
 $bullet = "<img src=\"images/bullet_1.gif\" alt=\"\" />";
 
 $query = "select * from GM_Toc where book_id='$book_id'";
-$result = mysql_query($query);
-$num_rows = mysql_num_rows($result);
 
-if($num_rows)
+$result = $db->query($query);
+$num_rows = $result ? $result->num_rows : 0;
+
+if($num_rows > 0)
 {
     echo "<div class=\"treeview\">";
-    for($i=1;$i<=$num_rows;$i++)
+    while($row = $result->fetch_assoc())
 	{
-		$row = mysql_fetch_assoc($result);
         $book_id = $row['book_id'];
 		$btitle = $row['btitle'];
 		$title = $row['title'];
@@ -153,7 +149,8 @@ function display_tabs($num)
 	
 	return $str_tabs;
 }
-
+if($result){$result->free();}
+$db->close();
 ?>           
         </div>
         <div id="footer">

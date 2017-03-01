@@ -15,4 +15,6 @@ if($db->connect_errno > 0)
 
     exit(1);
 }
+$db->query("set names utf8");
+
 ?>
