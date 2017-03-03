@@ -12,15 +12,15 @@
 	<div class="page">
         <div class="header">
             <ul class="nav">
-                <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
+                <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-				<li><a class="nav_kan" href="granthamala.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+				<li><a class="nav_kan" href="granthamala.html">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="about.php">ಒಳನೋಟ</a></li>
+                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
 				<li>|</li>
                 <li><a class="active nav_kan" href="#">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="purana_list.php">ಸಂಗ್ರಹ</a></li>
+                <li><a class="nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
             </ul>
@@ -119,8 +119,8 @@
                         <a href="treeview.php?book_id=227">ಆದಿಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಲಿಂಗಮಹಾಪುರಾಣ"> ಶ್ರೀ ಲಿಂಗಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="treeview.php?book_id=004">ಪಂಚೋಪನಿಷದಃ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀದೇವೀಭಾಗವತಂ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ"> ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu.php?ctitle=ಶ್ರೀದೇವೀಭಾಗವತಂ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;<br />
+                        <a href="granthagalu.php?ctitle=ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ%20-%20ಸೂತಸಂಹಿತಾ"> ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ - ಸೂತಸಂಹಿತಾ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ತ್ರಿಪುರಾರಹಸ್ಯ"> ಶ್ರೀ ತ್ರಿಪುರಾರಹಸ್ಯ</a>
                     </span>
                 </li>

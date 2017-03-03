@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />    
+	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
-	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>    
+	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>
 	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
 </head>
 

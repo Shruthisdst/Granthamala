@@ -4,9 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-2.0.0.min.js" charset="UTF-8"></script>
-	<script type="text/javascript" src="js/treeview.js"></script>
 	<link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+	<script type="text/javascript" src="js/jquery-2.0.0.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/treeview.js"></script>   
 	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
 </head>
 
@@ -18,7 +18,7 @@
 				<li>|</li>
 				<li><a class="nav_kan" href="granthamala.html">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
 				<li>|</li>
-				<li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
+                <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="anuvadakaru.html">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
 				<li>|</li>
@@ -34,10 +34,6 @@ include("connect.php");
 
 $book_id = $_GET['book_id'];
 
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
-mysql_set_charset("utf8");
-
 $stack = array();
 $p_stack = array();
 $first = 1;
@@ -50,15 +46,15 @@ $plus_link = "<img src=\"images/plus.gif\" alt=\"\" onclick=\"display_block(this
 $bullet = "<img src=\"images/bullet_1.gif\" alt=\"\" />";
 
 $query = "select * from GM_Toc where book_id='$book_id'";
-$result = mysql_query($query);
-$num_rows = mysql_num_rows($result);
 
-if($num_rows)
+$result = $db->query($query);
+$num_rows = $result ? $result->num_rows : 0;
+
+if($num_rows > 0)
 {
     echo "<div class=\"treeview\">";
-    for($i=1;$i<=$num_rows;$i++)
+    while($row = $result->fetch_assoc())
 	{
-		$row = mysql_fetch_assoc($result);
         $book_id = $row['book_id'];
 		$btitle = $row['btitle'];
 		$title = $row['title'];
@@ -153,7 +149,8 @@ function display_tabs($num)
 	
 	return $str_tabs;
 }
-
+if($result){$result->free();}
+$db->close();
 ?>           
         </div>
         <div id="footer">

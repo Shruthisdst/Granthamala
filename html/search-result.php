@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />    
+	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
     <script type="text/javascript" src="js/jquery-2.0.0.min.js" charset="UTF-8"></script>
@@ -37,11 +37,6 @@ include("connect.php");
 
 $bl = $_POST['bl'];
 $toc_title = $_POST['text'];
-
-$db = mysql_connect("localhost",$user,$password) or die("Not connected to database");
-$rs = mysql_select_db($database,$db) or die("No Database");
-
-mysql_set_charset("utf8");
 
 $toc_title = rtrim($toc_title);
 $toc_title = preg_replace("/[ ]+/", " ", $toc_title);
@@ -92,8 +87,10 @@ if($bl == "btitle")
     $query = "select distinct btitle, book_id from GM_Toc where btitle REGEXP '$book'";
     #echo $query;
 }
-$result = mysql_query($query);
-$num_rows = ($result)? mysql_num_rows($result): 0;
+
+$result = $db->query($query);
+$num_rows = $result ? $result->num_rows : 0;
+
 $b_id = 0;
 $book_title = 1;
 if ($num_rows > 0)
@@ -103,20 +100,19 @@ if ($num_rows > 0)
 if($num_rows)
 {
 	echo "<ul class=\"book_list\">";
-    for($i=1;$i<=$num_rows;$i++)
+    while($row = $result->fetch_assoc())
     {
-		$row = mysql_fetch_assoc($result);
         if($bl == "btitle")
         {
             $book_id = $row['book_id'];
             $btitle = $row['btitle'];
             
 			$query1 = "select * from GM_Toc where book_id = $book_id";
-            $result1 = mysql_query($query1);
-            $num_rows1 = mysql_num_rows($result1);
-			for($j=1;$j<=$num_rows1;$j++)
+			$result1 = $db->query($query1);
+			$num_rows1 = $result1 ? $result1->num_rows : 0;
+			if($num_rows1 > 0)
             {
-                $row1 = mysql_fetch_assoc($result1);
+                $row1 = $result1->fetch_assoc();
                 
                 $title = $row1['title'];
                 $level = $row1['level'];
@@ -173,6 +169,8 @@ else
 	echo"<div class=\"goback\">ಫಲಿತಾಂಶಗಳು ಲಭ್ಯವಿಲ್ಲ</div>";
 	echo"<div class=\"goback\"><a href=\"search.php\">ಹಿಂದಿನ ಪುಟಕ್ಕೆ ಹೋಗಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</a></div>";
 }
+if($result){$result->free();}
+$db->close();
 ?>
         </div>
         <div id="footer">
