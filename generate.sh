@@ -5,7 +5,7 @@ db="grm"
 usr="root"
 pwd="mysql"
 
-echo "DROP DATABASE IF EXISTS grm; CREATE DATABASE grm;" | /usr/bin/mysql -uroot -pmysql
+echo "DROP DATABASE IF EXISTS grm; CREATE DATABASE grm CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;" | /usr/bin/mysql -uroot -pmysql
 
 perl insert_author.pl $host $db $usr $pwd
 perl insert_books.pl $host $db $usr $pwd

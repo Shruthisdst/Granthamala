@@ -47,7 +47,8 @@ sub gen_unicode()
 	$flg = 1;
 
 	$kan_str =~ s/\\ralign\{(.*?)\}/!E! $ralign_btag !K! $1 !E! $ralign_etag !K! /g;
-	$kan_str =~ s/\\char'263/!E!&#x0CBD;!K!/g;
+	#~ $kan_str =~ s/\\char'263/!E!&#x0CBD;!K!/g;
+	$kan_str =~ s/\\char'263/!E!&#x93d;!K!/g;
 	$kan_str =~ s/\\char'365/!E!&#x0CC4;!K!/g;
 	$kan_str =~ s/\\char'273/!E!&#x0CB1;!K!/g;
 	$kan_str =~ s/\\char'366/nf/g;

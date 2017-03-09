@@ -11,7 +11,7 @@ open(IN,"GRM_toc_uni.xml") or die "can't open GRM_toc_uni.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
-$sth_enc=$dbh->prepare("set names utf8");
+$sth_enc=$dbh->prepare("set names utf8mb4");
 $sth_enc->execute();
 $sth_enc->finish();
 
@@ -24,7 +24,7 @@ level int(2),
 title varchar(10000),
 start_pages varchar(20),
 end_pages varchar(20),
-slno int(6) auto_increment, primary key(slno)) auto_increment=10001 ENGINE=MyISAM character set utf8 collate utf8_general_ci");
+slno int(6) auto_increment, primary key(slno)) auto_increment=10001 ENGINE=MyISAM character set utf8mb4 collate utf8mb4_general_ci");
 
 $sth1->execute();
 $sth1->finish();
