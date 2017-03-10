@@ -1,22 +1,25 @@
 @font-face {
-  font-family: Gubbi;
-  src: url('Gubbi.ttf') ;
+  font-family: nudi;
+  src: url('NUDI UNI 01K.ttf') ;
 }
+
 body{
     background-image: url('../images/images.jpeg');
     background-repeat: repeat;
-    font-family: Gubbi;
+    font-family: nudi;
+    line-height: 1.2; 
 }
 .para{
     margin: 1em;
     text-align: justify;
     padding: 0em 1em 0em 1em;
     color: #3D1400;
-    font-family: Gubbi;
+    font-family: nudi;
+    line-height: 1.4;
 }
 .page{
 	width: 900px;
-    font-family: Gubbi;    
+    font-family: nudi;    
 	margin: 0 auto;
     padding-bottom: 0.5em;
     background-image: url('../images/texture.jpeg');
@@ -34,7 +37,6 @@ body{
 .heading{
     text-align: center;
     margin: auto;
-    letter-spacing: 2px;
     padding-top: 1em;
     padding-bottom: 0.5em;
     font-size: 2.2em;
@@ -44,7 +46,6 @@ body{
 .nav{
 	list-style: none;
 	text-align: center;
-	letter-spacing: 1px;
 }
 .nav li{
 	display: inline;
@@ -52,7 +53,7 @@ body{
 }
 .nav li a {
     color: #731F11;
-	font-size: 1em;
+	font-size: 1.1em;
 	text-decoration: none;
 	padding: 0em 1em 0em 0.5em;
 }
@@ -60,10 +61,9 @@ body{
     text-decoration: underline;
 }
 .main_title{
-    font-family: Gubbi;
+    font-family: nudi;
     text-align: center;
     padding-top: 0em;
-    letter-spacing: 1px;
     font-size: 2.5em;
     color: #efcca2;
     width: 95%;
@@ -78,7 +78,7 @@ body{
 }
 .mainbody{
     min-height: 39em;
-    font-family: Gubbi;    
+    font-family: nudi;    
 }
 
 .image{
@@ -89,7 +89,14 @@ body{
     padding: 0em 9em 1em 9em;
     text-align: center;
     font-size: 0.85em;
-    color: #100B32;
+}
+.imgOverlay a{
+	text-decoration: none;
+	color: #660000;
+}
+.imgOverlay a:hover{
+	text-decoration: underline;
+	color: #660000;
 }
 .textbf{
     font-weight: bold;
@@ -99,7 +106,6 @@ body{
     font-size: 1em;
     text-align: center;
     color: #411F02;
-    line-height: 200%;
 }
 .anuvada_head{
     font-size: 1.5em;
@@ -131,9 +137,7 @@ body{
     text-decoration: underline;
 }
 .anuvada li{
-    line-height: 150%;
     list-style-type: disc;
-    font-size: 1.1em; 
     padding: 1.5em 0em 0em 0em;
     color: #5C2E00;
     
@@ -147,6 +151,8 @@ body{
 }
 .anuvada{
     margin: 1em 0em 2em 3.5em;
+    font-size: 1.1em; 
+
 }
 .auth_name a{
     color: #9C0F10;
@@ -156,13 +162,11 @@ body{
     padding-top: 0.5em;
     text-align: center;
     font-size: 2em;
-    letter-spacing: 3px;
 }
 #main_heading{
     color: #731F11;
     text-align: center;
     font-size: 1.5em;
-    letter-spacing: 1px;
 }
 .author{
     color: #9C0F10;
@@ -210,14 +214,12 @@ p{
     font-size: 1.5em;
     padding-bottom: 0.5em;
     color: #731F11;
-    letter-spacing: 1px;
 }
 .book_title {
     color: #5C2E00;
     list-style: decimal;
     margin-left: 5em;
     padding: 0em 2em 1em 0em;
-    line-height: 200%;
 }
 .book_title a{
     font-size: 1.1em;
@@ -261,9 +263,6 @@ p{
 	text-decoration: none;
 }
 
-.s1{
-	letter-spacing: 1px;
-}
 .s1 a{
 	color: #532900;
 	font-size: 1em;
@@ -271,9 +270,7 @@ p{
 .s1 a:hover{
 	text-decoration: underline;
 }
-.s2 {
-	letter-spacing: 1px;
-} 
+
 .s2 a{
 	color: #532900;
 	font-size: 1em;
@@ -284,7 +281,6 @@ p{
 .archive_title{
 	font-weight: bold;
 	text-align: center;
-	letter-spacing: 1px;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -376,7 +372,6 @@ select{
     margin-left: 2em;
     padding-top: 2em;
     padding-bottom: 1em;
-    letter-spacing: 1px;
     color: #800000;
 }
 
@@ -448,17 +443,17 @@ input[type=text]{
 	font-size: 1.7em;
 	text-align: center;
 	position: absolute;
-	top: 15.6em;
+	top: 16em;
 	left: 11em;
 	width: 300px;
 	color: #660000;
 }
 .imgOverlay .rigveda{
-	font-size: 1.4em;
+	font-size: 1.5em;
 	text-align: center;
 	position: absolute;
-	top: 26em;
-	left: 13.2em;
+	top: 24.5em;
+	left: 12.5em;
 	width: 300px;
 	color: #660000;
 }

@@ -14,13 +14,13 @@
             <ul class="nav">
                 <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-				<li><a class="nav_kan" href="granthamala.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+				<li><a class="nav_kan" href="list.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+				<li>|</li>
+				<li><a class="nav_kan" href="../Rigveda/index.php" target="_blank">ಋಗ್ವೇದಸಂಹಿತಾ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="about.php">ಒಳನೋಟ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="anuvadakaru.php">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
-				<li>|</li>
-                <li><a class="active nav_kan" href="#">ಸಂಗ್ರಹ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
             </ul>
@@ -57,6 +57,7 @@ if($num_rows > 0)
 			$result2 = $db->query($query2);
 			$num_rows2 = $result2 ? $result2->num_rows : 0;
 			$volume_count = $num_rows2;
+			//~ if(!($num_rows2 >=36))
 
 			if($ctitle != $btitle)
 			{

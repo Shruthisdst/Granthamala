@@ -11,11 +11,11 @@ open(IN,"grm_books.xml") or die "can't open grm_books.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
-$sth_enc=$dbh->prepare("set names utf8mb4");
+$sth_enc=$dbh->prepare("set names utf8");
 $sth_enc->execute();
 $sth_enc->finish();
 
-$sth11=$dbh->prepare("CREATE TABLE GRM_author(authorname varchar(400), authid int(6) auto_increment, primary key(authid))auto_increment=10001 ENGINE=MyISAM character set utf8mb4 collate utf8mb4_general_ci;");
+$sth11=$dbh->prepare("CREATE TABLE GRM_author(authorname varchar(400), authid int(6) auto_increment, primary key(authid))auto_increment=10001 ENGINE=MyISAM character set utf8 collate utf8_general_ci;");
 $sth11->execute();
 $sth11->finish();
 

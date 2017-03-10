@@ -1,0 +1,18 @@
+<!ELEMENT rigveda (mandala+)>
+<!ELEMENT mandala (sukta+)>
+<!ATTLIST mandala msankhya CDATA #REQUIRED>
+<!ELEMENT sukta (mantra+)>
+<!ATTLIST sukta ssankhya CDATA #REQUIRED>
+<!ELEMENT mantra (rishi,chandas,text1,text2,text3)>
+<!ATTLIST mantra sankhya CDATA #REQUIRED>
+<!ELEMENT rishi (#PCDATA)>
+<!ELEMENT chandas (#PCDATA)>
+<!ELEMENT text1 (#PCDATA)>
+<!ATTLIST text1 devata CDATA #REQUIRED>
+<!ELEMENT text2 (#PCDATA)>
+<!ATTLIST text2 devata CDATA #REQUIRED>
+<!ELEMENT text3 (#PCDATA)>
+<!ATTLIST text3 devata CDATA #REQUIRED>
+
+
+

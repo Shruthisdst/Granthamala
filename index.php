@@ -14,13 +14,13 @@
             <ul class="nav">
                 <li><a class="active nav_kan" href="#">ಮುಖಪುಟ</a></li>
 				<li>|</li>
-                <li><a class="nav_kan" href="php/granthamala.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+                <li><a class="nav_kan" href="php/list.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
+				<li>|</li>
+                <li><a class="nav_kan" href="Rigveda/index.php" target="_blank">ಋಗ್ವೇದಸಂಹಿತಾ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="php/about.php">ಒಳನೋಟ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="php/anuvadakaru.php">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
-				<li>|</li>
-                <li><a class="nav_kan" href="php/purana_list.php">ಸಂಗ್ರಹ</a></li>
 				<li>|</li>
                 <li><a class="nav_kan" href="php/search.php">ಹುಡುಕಿ</a></li>
             </ul>
@@ -28,8 +28,8 @@
         <div class="mainbody">
 			<div class="imgOverlay">
 				<center><img class="homeimg" src="php/images/image.gif"  alt="images"/></center>
-				<div class="text">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ   ಗ್ರಂಥರತ್ನಮಾಲಾ</div>
-				<div class="rigveda">ಋಗ್ವೇದಸಂಹಿತಾ, ಪುರಾಣಗಳು, ಇತರೆ <span style="font-size: 0.65em;">(ಕನ್ನಡ ಭಾಷಾರ್ಥ, ಅನುವಾದ, ವಿವರಣೆಗಳೊಡನೆ)</span></div>
+				<div class="text"><a href="php/list.php">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ   ಗ್ರಂಥರತ್ನಮಾಲಾ</a></div>
+				<div class="rigveda"><a href="Rigveda/index.php" target="_blank">ಋಗ್ವೇದಸಂಹಿತಾ</a><br /><span style="font-size: 0.65em;">(ಕನ್ನಡ ಭಾಷಾರ್ಥ, ಅನುವಾದ, ವಿವರಣೆಗಳೊಡನೆ)</span></div>
 			</div>
         </div>
         <div id="footer">

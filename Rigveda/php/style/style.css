@@ -1,0 +1,699 @@
+@font-face {
+  font-family: nudi;
+  src: url('NUDI UNI 01K.ttf') ;
+}
+
+body{
+	font-size: 1em;
+	padding-bottom:10px;
+	font-family: nudi;
+	 line-height: 1.2; 
+}
+.page{
+	background-color: #F6F2CD;
+	width: 60.4em;
+	min-height: 53em;
+	border: 1px solid #C0C0C0;
+	margin: auto;
+	-moz-box-shadow: 0px 0px 30px #EBC19D;
+    -webkit-box-shadow: 0px 0px 20px #EBC19D;
+    box-shadow: 0px 0px 20px #C0C0C0;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+}
+.header
+{
+	background-color: #D14719;
+	height: 100%;
+	width: 99.85%;
+	border: 1px solid #D14719;
+}
+.mainbody{
+	padding-top: 1em;
+	font-family: nudi;
+}
+.mainbody p{
+	line-height: 1.5;
+}
+.head{
+	margin-left: 1em;
+	margin-top: 1em;
+}
+.nav{
+	list-style: none;
+	text-align: right;
+	
+}
+.nav li{
+	display: inline;
+}
+.nav li a {
+	color: #F6F2CD;
+	font-size: 1.2em;
+	font-family: nudi;
+	font-weight:bold;
+	text-decoration: none;
+	padding: 0em 1em 0em 1em;
+}
+.nav li a.active, .nav li a:HOVER{
+	text-decoration: underline;
+}
+.first{
+	text-align: left;
+	
+	font-weight: bold;
+	color: #F6F2CD;
+	margin-left: 4em;
+	font-family: nudi;
+
+}
+.heading{
+	text-align: left;
+	font-size: 3.5em;
+	font-family: nudi;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	
+	color: #F6F2CD;
+	text-shadow: 2px 2px 2px #100000;
+}
+.sub_title{
+	text-align: left;
+	color: #F6F2CD;
+	
+	margin-left: 1em;
+	font-family: nudi;
+	font-weight: bold;
+}
+.textbf{
+	font-weight: bold;
+	font-family: nudi;
+}
+p{
+	margin: 1em 2em 1em 2em;
+	text-align: justify;
+	font-family: nudi;
+
+}
+.akara{
+	text-align: center;
+	margin-top: 3em;
+	font-weight: bold;
+	color: #996600;
+	
+	font-family: nudi;
+}
+.main_title{
+	text-align: center;
+	font-size: 2em;
+	font-family: nudi;
+	padding-top: 1em;
+	color: #CC6600;
+	
+}
+.sampadaka{
+	text-align: center;
+	margin-top: 3em;
+	
+}
+.sampadaka a{
+	text-decoration: underline;
+	font-size: 1.9em;
+	font-family: nudi;
+	color: #CC6600;
+}
+.parividi{
+	text-align: center;
+	margin-top: 2.5em;
+	
+}
+.parividi a{
+	font-size: 2.5em;
+	font-family: nudi;
+	text-decoration: underline;
+	color: #CC6600;
+}
+.names{
+	margin-left: 19em;
+	padding-bottom: 1em;
+}
+.names li{
+	list-style-type: none;
+	color: #472400;
+	font-weight: bold;
+	line-height: 2.7;
+	font-family: nudi;
+}
+.veda{
+	text-align: center;
+	margin-left: 19em;
+	padding-top: 1em;
+	font-family: nudi;
+}
+.title{
+	text-align: center;
+	font-size: 1.9em;
+	color: #CC6600;
+	margin-bottom: 0.50em;
+	padding-top: 0.5em;
+	font-family: nudi;
+}
+.editor{
+	text-align: center;
+	color: #472400;
+	font-weight: bold;
+	padding-top: 0.5em;
+	font-family: nudi;
+}
+.associate{
+	text-align: center;
+	color: #472400;
+	font-weight: bold;
+	padding-top: 0.5em;
+	font-family: nudi;
+	line-height: 1.5;
+}
+.mandali{
+	text-align: center;
+	color: #996600;
+	font-weight: bold;
+	padding-top: 0.5em;
+	font-family: nudi;
+}
+.names li .subspan{
+	font-size: 0.80em;
+	color:  #7A5200;
+	font-family: nudi;
+}
+.eng{
+	color: #996600;
+	font-size: 1em;
+	text-align: center;
+	font-weight: bold;
+	font-family: nudi;
+}
+.engspan{
+	font-size: 0.80em;
+	color: #472400;
+	font-family: nudi;
+}
+.veda{
+	color: #996600;
+	font-weight: bold;
+	margin-right: 19em;
+	
+	font-family: nudi;
+}
+.break{
+	font-size: 0.80em;
+	color:  #7A5200;
+	margin: -1em 0em 0em 1.7em;
+	font-family: nudi;
+}
+.maintitle{
+	font-size: 1.8em;
+	color: #CC6600;
+	text-align: center;
+	
+	padding-top: 0.9em;
+	font-family: nudi;
+}
+.list{
+	text-shadow:  1px 2px #DDD;
+}
+.list li a{
+	text-decoration: none;
+	color: #333300;
+}
+.list li a:hover{
+	text-decoration: underline;
+}
+.list li {
+	color: #333300;
+	
+	font-size: 1.4em;
+	margin: 1em 0em -1.8em 12em;
+	padding-top: 2em;
+	font-family: nudi;
+}
+.volume{
+	margin:  2em 0em 0em 8em;
+}
+.volume tr td{
+	color: #003366;
+	font-weight: bold;
+	text-align: center;
+	padding: 1.5em;
+	font-family: nudi;
+}
+.volume a{
+	text-decoration: none;
+	color: #003366;
+}
+.volume a:hover{
+	text-decoration: underline;
+}
+.image{
+	margin: 1em 0em 0em 12em;
+}
+.samputa{
+	padding-top: 1em;
+	text-align: center;
+}
+.samputa a{
+	text-decoration: none;
+	font-size: 1.4em;
+	font-family: nudi;
+	color: #8B0000;
+}
+.samputa a:hover{
+	text-decoration: underline;
+}
+.munnudi{
+	text-align: center;
+}
+.munnudi a{
+	text-decoration: none;
+	font-size: 1.4em;
+	font-family: nudi;
+	color: #8B0000;
+}
+.munnudi a:hover{
+	text-decoration: underline;
+}
+.dnone{
+	display: none;
+}
+
+.treeview ul li { 
+	list-style: none; 
+	list-style-position:outside;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	border-bottom: none;
+	margin-left: 2.5em;
+	text-align: justify;
+	margin-right: 1em;
+	text-indent: -18px;
+	font-family: nudi;
+}
+
+.treeview ul li img{ 
+	vertical-align: middle;
+}
+.book{
+	text-align: center;
+	font-size: 1.6em;
+	
+	padding-bottom: 1em;
+	color: #CC6600;
+	padding-top: 1em;
+	font-family: nudi;
+}
+
+.treeview ul li a{
+	text-decoration: none;
+}
+
+.s1 a{
+	color: #663300;
+	font-size: 1em;
+	font-family: nudi;
+}
+.s1 a:hover{
+	text-decoration: underline;
+}
+ 
+.s2 a{
+	color: #663300;
+	font-size: 1em;
+	font-family: nudi;
+}
+.s2 a:hover{
+	text-decoration: underline;
+}
+.mandala{
+	text-align: center;
+	margin-left: 4.1em;
+	margin-bottom: 3em;
+	font-family: nudi;
+	line-height: 1.5;
+}
+.tab{
+	font-size: 1.2em;
+	text-align: right;
+	background-color: #F5D6CC;
+	font-family: nudi;
+}
+
+.para{
+	font-size: 1.2em;
+	text-align: justify;
+	padding-right: 0.8em;
+	
+	color: #663300;
+	
+	font-family: nudi;
+}
+.para2{
+	font-size: 1.1em;
+	text-align: justify;
+	padding-right: 0.2em;
+	
+	color: #663300;
+	font-family: nudi;
+}
+.sub_tit td{
+	border: 1px solid #000;
+	padding: 0.7em;
+}
+.small td{
+	font-size: 0.7em;
+	font-family: nudi;
+	border: 1px solid #000;
+	padding: 0.6em 0.7em 0.6em 0.3em;
+}
+
+.small td a{
+	color: #990000;
+}
+.small td a:hover{
+	color: #8B0000;
+}
+
+.content a{
+	color: #000;
+	font-size: 0.85em;
+	font-family: nudi;
+	text-decoration: none;
+}
+
+.content a:hover{
+	text-decoration: underline;
+}
+.mandala_table{
+	margin-left: 2.3em;
+}
+
+.mandala_table tr td{
+	padding: 0.8em;
+	border: 1px solid #000;
+	text-align: center;
+	font-family: nudi;
+	background-color: #F5D6CC;
+}
+
+h3{
+	padding-top: 3em;
+	padding-left: 1em;
+}
+.top a{
+	color: #990000;
+}
+.top a:hover{
+	text-decoration: none;
+	
+}
+.spantitle{
+	font-size: 1.4em;
+	font-family: nudi;
+	margin-left: 2em;
+	color: #472400;
+	
+}
+.rukku{
+	list-style-type: decimal;
+	margin-left: 6em;
+	color: #663300;
+	font-size: 1em;
+	padding-bottom: 1em;
+}
+.rukku a{
+	text-decoration: none;
+	color: #663300;
+	font-size: 1em;
+	font-family: nudi;
+	
+}
+.rukku a:hover{
+	text-decoration: underline;
+}
+.mandala2{
+	text-align: center;
+	font-family: nudi;
+	margin-left: 3em;
+	margin-bottom: 3em;
+}
+.ashtaka{
+	font-size: 1.2em;
+	font-family: nudi;
+	margin-left: 2em;
+	padding-top: 2em;
+	padding-bottom: 0.5em;
+	color: #663300;
+	
+}
+.ashtaka_table{
+	border: 1px solid #000;
+	margin-left: 2.6em;
+	background-color: #F5D6CC;
+}
+.ashtaka_table tr td{
+	border: 1px solid #000;
+	padding: 0.8em;
+	text-align: center;
+}
+.aline a{
+	font-size: 1em;
+	font-family: nudi;
+	color: #000;
+}
+.aline a:hover{
+	text-decoration: none;
+}
+.letter{
+	display: inline;
+	/* line-height: 50px; */
+}
+.letter a{
+	text-decoration: none;
+	color: #000;
+	font-family: nudi;
+}
+.letter a:hover{
+	text-decoration: underline;
+}
+.ptab{
+	margin:  1em 0em 1em 8em;
+}
+.level1{
+	padding-bottom: 1em;
+	letter-spacing: 10px;
+	font-size: 1.25em;
+	font-family: nudi;
+}
+.level2{
+	letter-spacing: 8px;
+	font-size: 1.25em;
+	font-family: nudi;
+}
+.rule{
+	height: 3px;
+	background-color: #CC3300;
+	width: 100%;
+	margin: 0.1em 0 1em 0;
+}
+.letterspan{
+	font-size: 2em;
+	font-family: nudi;
+	text-align: center;
+	padding-bottom: 0.5em;
+	color: #B82E00;
+}
+.pada{
+	font-size: 1em;
+	font-family: nudi;
+	margin-left: 5em;
+	line-height: 1.8;
+	
+}
+.pada a{
+	text-decoration: none;
+	color: #522900;
+}
+.pada a:hover{
+	text-decoration: underline;
+}
+.mantra{
+	font-size: 1em;
+	font-family: nudi;
+	
+	margin: 1em 0em 1em 4.5em;
+	list-style-type: disc;
+	color: #522900;
+}
+.mantra a{
+	text-decoration: none;
+	color: #522900;
+}
+.mantra a:hover{
+	text-decoration: underline;
+}
+.wordspan{
+	margin-left: 2em;
+	font-size: 1.25em;
+	font-family: nudi;
+	
+	color: #8A2E00;
+}
+.gap-above-large{
+	padding-top: 1em;
+	padding-bottom: 0.4em;
+}
+
+.triplet a{
+	margin-left: 3.5em;
+	text-decoration: none;
+	color: #000;
+	line-height: 1.5;
+	
+}
+.triplet a:hover{
+	text-decoration: underline;
+}
+.archive_title{
+	font-weight: bold;
+	text-align: center;
+	
+	margin-bottom: 1em;
+}
+.archive_holder{
+	float: left;
+	width: 46em;
+	margin: 2em 0em 0em 6.5em;
+	padding: 1.25em 0 1em 1em;
+	background-color: #F5D6CC;
+	box-shadow: 0px 0px 2px #999999;
+	-moz-box-shadow: 0px 0px 2px #999999;
+	border-radius: 3px;
+}
+select{
+	background: none;
+	border: 1px solid #B8860B;
+	font-size: 0.9em;
+	margin: 0em 0em 1em 0.50em;
+}
+#kbd{
+	width: 290px;
+	float: right;
+}
+.keys{
+	width: 36px;
+	height: 27px;
+	float: left;
+	border-right: 1px solid #B8860B;
+	border-bottom: 1px solid #B8860B;
+	padding: 0px;
+	text-align: center;
+	cursor:pointer;
+}
+.keys:HOVER{
+	background-color: #F6F2CD;
+}
+
+.tline {
+	border-top: 1px solid #B8860B;
+}
+.lline {
+	border-left: 1px solid #B8860B;
+}
+.stitle{
+	font-size: 1.1em;
+	color: #8B0000;
+	
+}
+.titlespan{
+	
+}
+.sleft{
+	
+}
+.search-result{
+	font-size: 1.5em;
+	
+	text-align: left;
+	color: #800000;
+	padding: 1em 0em 1em 2em;
+}
+.man{
+	list-style-type: disc;
+	margin-left: 4.5em;
+	color: #522900;
+	
+	font-family: nudi;
+	padding-bottom: 1.7em;
+}
+.man a{
+	text-decoration: none;
+	color: #522900;
+}
+
+.man a:hover{
+	text-decoration: underline;
+}
+#button2{
+    margin-left: 1em;
+}
+.tocspan{
+	margin-left: 4em;
+	margin-right: 1em;
+	/* line-height: 30px; */
+	padding: 5px 0px 15px 5px;
+	list-style-type: disc;
+	color: #522900;
+	text-align: justify;
+	font-family: nudi;
+}
+.tocspan a{
+	text-decoration: none;
+	color: #522900;
+	
+}
+.tocspan a:hover{
+	text-decoration: underline;
+}
+.goback{
+	margin-left: 2.5em;
+	font-size: 1.1em;
+}
+.goback a{
+	color: #0000CC;
+}
+input{
+	background: none;
+	border: 1px solid #B8860B;
+	border-radius: 5px;
+}
+input[type=submit], input[type=reset]{
+	padding: 5px 20px 0 20px;
+	font-size: 0.9em;
+}
+input[type=text]{
+	padding: 5px 0px 5px 5px;
+}
+.booktitle{
+    list-style-type: none;
+    color: #8A2E00;
+    font-size: 1.3em;
+    padding: 1em 1em 0.5em 2em;;
+}
+.starting_page{
+    font-size: 1.1em;
+    padding: 0em 0em 1em 1em;
+}
+.starting_page a{
+    color: #800000;
+}
+.starting_page a:hover{
+    text-decoration: none;
+}
