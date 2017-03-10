@@ -9,7 +9,7 @@ echo "DROP DATABASE IF EXISTS Rigveda1; CREATE DATABASE Rigveda1 CHARACTER SET u
 
 
 perl akaradi.pl $host $db $usr $pwd
-perl insert_toc.pl $host $db $usr $pwd
+perl insert_rigtoc.pl $host $db $usr $pwd
 perl rukku.pl $host $db $usr $pwd
 perl vol36_pada_index_insert.pl $host $db $usr $pwd
 perl vol36_triplet_index_insert.pl $host $db $usr $pwd
