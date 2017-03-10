@@ -61,8 +61,9 @@ $bullet = "<img src=\"images/bullet_1.gif\" alt=\"\" />";
 if($num_rows > 0)
 {
 	echo "<div class=\"treeview\">";
+	$actualID = $bookID;
 	$bookID = get_rigBookid($bookID);
-	echo "<div class=\"starting_page\"><a href=\"../../Volumes/$bookID/index.djvu\" target=\"_blank\">ಮುನ್ನುಡಿ</a></div>";
+	echo "<div class=\"starting_page prf-color\"><a href=\"../../Volumes/$bookID/index.djvu?djvuopts&page=". $preface_pagenum[$actualID] .".djvu\" target=\"_blank\">ಮುನ್ನುಡಿ</a></div>";
 	while($row = $result->fetch_assoc())
 	{
 		$book_id = $row['book_id'];
