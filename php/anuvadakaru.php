@@ -42,6 +42,7 @@
                         <a href="treeview.php?book_id=086">ಕಾಂಚೀಮಾಹಾತ್ಮ್ಯಂ</a>&nbsp;;&nbsp;
                         <a href="../Volumes/285/index.djvu" target="_blank">ವರಿವಸ್ಯಾ ರಹಸ್ಯಂ</a>&nbsp;;&nbsp;
                         <a href="../Volumes/324/index.djvu" target="_blank">ವನದುರ್ಗೋಪನಿಷತ್‍</a>
+                        <a href="../Volumes/325/index.djvu" target="_blank">ಶಾಕ್ತೋಪನಿಷದಃ</a>
                     </span>
                 </li>
                 
