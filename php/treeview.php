@@ -50,6 +50,14 @@ $query = "select * from GM_Toc where book_id='$book_id'";
 $result = $db->query($query);
 $num_rows = $result ? $result->num_rows : 0;
 
+$author_query = "select authorname from GRM_books where book_id='$book_id'";
+
+$author_result = $db->query($author_query);
+$author_num_rows = $author_result ? $author_result->num_rows : 0;
+$authrow = $author_result->fetch_assoc();
+$authorname = $authrow['authorname'];
+
+
 if($num_rows > 0)
 {
     echo "<div class=\"treeview\">";
@@ -66,7 +74,12 @@ if($num_rows > 0)
         if($flag)
         {
             echo "<div class=\"book\">$btitle</div>";
-            echo "<div class=\"starting_page\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">ಆರಂಭಿಕ ಪುಟ</a></div>";
+            
+            echo "<div class=\"starting_page\">
+            <a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">ಆರಂಭಿಕ ಪುಟ</a>
+            <span class=\"authorname\">ಅನುವಾದಕರು: ಶ್ರೀ $authorname</span>
+            </div>";
+           
             echo "<div class=\"toc_title\">ವಿಷಯಾನುಕ್ರಮಣಿಕೆ</div>";
             $flag = 0;
         }

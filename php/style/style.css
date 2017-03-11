@@ -306,6 +306,11 @@ p{
 .starting_page a:hover{
     text-decoration: none;
 }
+.authorname{
+	float: right;
+	padding-right: 3em;
+	color: #800000;
+}
 .toc_title{
     font-size: 1.15em;
     padding: 0.5em 0em 1em 1em;
