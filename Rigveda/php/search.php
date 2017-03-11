@@ -5,6 +5,7 @@
 	<link href="style/reset.css" media="screen" rel="stylesheet" type="text/css" />	
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>
+	<link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
 	<title>ಋಗ್ವೇದ ಸಂಹಿತಾ</title>
 </head>
 

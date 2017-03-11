@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="php/style/reset.css" media="screen" rel="stylesheet" type="text/css" />	
 	<link href="php/style/style.css" media="screen" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" type="image/ico" href="php/images/logo.ico" />
 	<title>ಋಗ್ವೇದ ಸಂಹಿತಾ</title>
 </head>
 

@@ -6,6 +6,7 @@
 	<link href="style/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/treeview.js"></script>
+	<link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
 	<title>ಋಗ್ವೇದ ಸಂಹಿತಾ</title>
 </head>
 
