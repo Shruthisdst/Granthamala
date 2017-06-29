@@ -3,6 +3,11 @@
   src: url('NUDI UNI 01K.ttf') ;
 }
 
+@font-face {
+  font-family: goda;
+  src: url('Goda_1_0_6.ttf') ;
+}
+
 body{
 	font-size: 1em;
 	padding-bottom:10px;
@@ -134,7 +139,7 @@ p{
 	color: #CC6600;
 }
 .names{
-	margin-left: 19em;
+	text-align: center;
 	padding-bottom: 1em;
 }
 .names li{
@@ -514,10 +519,9 @@ h3{
 }
 .pada{
 	font-size: 1em;
-	font-family: nudi;
+	font-family: goda;
 	margin-left: 5em;
-	line-height: 1.8;
-	
+	line-height: 2;
 }
 .pada a{
 	text-decoration: none;
@@ -545,7 +549,12 @@ h3{
 	margin-left: 2em;
 	font-size: 1.25em;
 	font-family: nudi;
-	
+	color: #8A2E00;
+}
+.swarawordspan{
+	margin-left: 2em;
+	font-size: 1.25em;
+	font-family: goda;
 	color: #8A2E00;
 }
 .gap-above-large{

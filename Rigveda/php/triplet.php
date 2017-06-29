@@ -27,104 +27,101 @@
 include("connect.php");
 include("common.php");
 
-$id = $_GET['id'];
 $word = $_GET['word'];
 
 echo "<br/><br/>";
-echo "<span class=\"wordspan\">$word</span>";
+echo "<span class=\"swarawordspan\">$word</span>";
+echo "<br/><br/>";
 
-$query2 = "SELECT * from triplet_index where index_id = '$id'";
+$query2 = "SELECT * from swara_index where word = '$word'";
 $result2 = $db->query($query2);
 $num_rows2 = $result2 ? $result2->num_rows : 0;
-
-$quotient = intval($num_rows2 / 4);
-$remainder = $num_rows2 % 4;
-$column = 4;
-
-if($remainder == 0)
-{
-	$rows = $quotient;
-}
-else
-{
-	$rows = $quotient + 1;
-}
-#echo $rows . "->" . $column;
-
+$temp = '';
 if($num_rows2 > 0)
 {
-	echo "<table>";
-	for($i=1;$i<=$rows;$i++)
+	while($row1 = $result2->fetch_assoc())
 	{
-		echo "<tr>";
-		for($j=1;$j<=$column;$j++)
+		$tripletGrp = $row1['triplet'];
+	
+		$triplets = preg_split('/;/',$tripletGrp);
+
+		if(count($triplets))
 		{
-			echo "<td>";
-			$row1 = $result2->fetch_assoc();
-
-			$mandala = $row1['mandala'];
-			$sukta = $row1['sukta'];
-			$rukku = $row1['rukku'];
-
-			$query1 = "SELECT * FROM mandala_table where mandala = '$mandala' and sukta = '$sukta' and rukku = '$rukku'";
-
-			$result1 = $db->query($query1);
-			$num_rows1 = $result1 ? $result1->num_rows : 0;
-
-			if($num_rows1 > 0)
+			echo "<table>";
+			for($i=0;$i<count($triplets);++$i)
 			{
-				while($row = $result1->fetch_assoc())
+				if(!$i)
 				{
-					$page = $row['page_no'];
-					$vol = $row['vol_no'];
+					echo "<tr>";
+				}
+				elseif(!($i % 4))
+				{
+					echo "</tr>";
+					echo "<tr>";
+				}
+				$ids = explode('.', $triplets[$i]);
+				$mandala = $ids[0];
+				$sukta = $ids[1];
+				$rukku = $ids[2];
+				$query1 = "SELECT * FROM mandala_table where mandala = '$mandala' and sukta = '$sukta' and rukku = '$rukku'";
+				$result1 = $db->query($query1);
+				$num_rows1 = $result1 ? $result1->num_rows : 0;
 
-					$query3 = "SELECT * from prelim_table where vol_no = '$vol'";
-					$result3 = $db->query($query3);
-					$num_rows3 = $result3 ? $result3->num_rows : 0;
-
-					if($num_rows3 > 0)
+				if($num_rows1 > 0)
+				{
+					while($row = $result1->fetch_assoc())
 					{
-						while($row3 = $result3->fetch_assoc())
-						{
-							$no = $row3['no_prelims'];
-							$page_num = $page - $no;
-							if($page_num < 10)
-							{
-								$page_no = "000".$page_num;
-							}
-							elseif($page_num < 100)
-							{
-								$page_no = "00".$page_num;
-							}
-							elseif($page_num < 1000)
-							{
-								$page_no = "0".$page_num;
-							}
-							else
-							{
-								$page_no = $page_num;
-							}
+						$page = $row['page_no'];
+						$vol = $row['vol_no'];
 
-							if($vol < 10)
+						$query3 = "SELECT * from prelim_table where vol_no = '$vol'";
+						$result3 = $db->query($query3);
+						$num_rows3 = $result3 ? $result3->num_rows : 0;
+
+						if($num_rows3 > 0)
+						{
+							while($row3 = $result3->fetch_assoc())
 							{
-								$vnum = "00" . $vol;
+								$no = $row3['no_prelims'];
+								$page_num = $page - $no;
+								if($page_num < 10)
+								{
+									$page_no = "000".$page_num;
+								}
+								elseif($page_num < 100)
+								{
+									$page_no = "00".$page_num;
+								}
+								elseif($page_num < 1000)
+								{
+									$page_no = "0".$page_num;
+								}
+								else
+								{
+									$page_no = $page_num;
+								}
+
+								if($vol < 10)
+								{
+									$vnum = "00" . $vol;
+								}
+								else
+								{
+									$vnum = "0" . $vol;
+								}
+								$vnum = get_rigBookid($vnum);
+								echo "<td>";
+								echo "<div class=\"triplet\"><a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
+								echo "</td>";
 							}
-							else
-							{
-								$vnum = "0" . $vol;
-							}
-							$vnum = get_rigBookid($vnum);
-							echo "<div class=\"triplet\"><a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
-							
 						}
 					}
 				}
 			}
-			echo "</td>";
-		}
-		echo "</tr>";
+			echo "</tr>";
+			echo "</table>";
+		} 
 	}
-	echo "</table>";
 }
 
 if($result2){$result2->free();}

@@ -77,7 +77,7 @@ include("connect.php");
 
 $letter = $_GET['letter'];
 
-$query1 = "SELECT * from pada_index where word like '$letter%'";
+$query1 = "SELECT * from swara_index where word like '$letter%'";
 $result1 = $db->query($query1);
 $num_rows1 = $result1 ? $result1->num_rows : 0;
 
@@ -107,8 +107,7 @@ if($num_rows1)
 			echo "<td>";
 			$row1 = $result1->fetch_assoc();
 			$word =$row1['word'];
-			$id = $row1['index_id'];
-			echo "<div class=\"pada\"><a href=\"triplet.php?id=$id&amp;word=$word\">$word</a></div>";
+			echo "<div class=\"pada\"><a href=\"triplet.php?word=$word\">$word</a></div>";
 			echo "</td>";
 		}
 		echo "</tr>";

@@ -18,7 +18,11 @@ perl insert_rigtoc.pl $host $db $usr $pwd
 perl rukku.pl $host $db $usr $pwd
 perl vol36_pada_index_insert.pl $host $db $usr $pwd
 perl vol36_triplet_index_insert.pl $host $db $usr $pwd
+perl swara.pl $host $db $usr $pwd
+perl index.pl $host $db $usr $pwd
 
 /usr/bin/mysql -uroot -p$pwd $db < akaradi_index.sql
 /usr/bin/mysql -uroot -p$pwd $db < mandala_table.sql
 /usr/bin/mysql -uroot -p$pwd $db < prelim_table.sql
+
+echo "DROP TABLE IF EXISTS swara;" | /usr/bin/mysql -uroot -p$pwd $db
