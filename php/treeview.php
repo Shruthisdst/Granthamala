@@ -83,8 +83,9 @@ if($num_rows > 0)
             echo "<div class=\"toc_title\">ವಿಷಯಾನುಕ್ರಮಣಿಕೆ</div>";
             $flag = 0;
         }
-        $title = preg_replace('/—/',"",$title);
+        //~ $title = preg_replace('/—/',"",$title);
         $title = preg_replace('/-/'," &ndash; ", $title);
+        $title = preg_replace('/—/'," &mdash; ", $title);
         if($first)
         {
             array_push($stack,$level);

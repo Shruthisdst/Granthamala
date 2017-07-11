@@ -120,20 +120,23 @@ if($num_rows)
 
                 $btitle = preg_replace('/-/'," &ndash; ", $btitle);
                 $btitle = preg_replace("/$book/", "<span style=\"color: red\">$book</span>", $btitle);
+                
+                echo "\n<li class=\"title_list\">";
 
                 if($b_id != $book_id)
                 {
                     if($level != 0)
                     {
-                        echo "\n<li class=\"title_list\"><a href=\"treeview.php?book_id=$book_id\">$btitle</a></li>";
+                        echo "<a href=\"treeview.php?book_id=$book_id\">$btitle</a>";
                         $b_id = $book_id;
                     }
                     else
                     {
-                        echo "\n<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>";
+                        echo "<a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a>";
                         $b_id = $book_id;
                     }
                 }
+                echo "</li>";
             }
 
         }
