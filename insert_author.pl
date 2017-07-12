@@ -47,7 +47,7 @@ sub insert_authors()
 	$ref=$sth->fetchrow_hashref();
 	if($sth->rows()==0)
 	{
-		$sth1=$dbh->prepare("insert into GRM_author values('$authorname',null)");
+		$sth1=$dbh->prepare("insert into GRM_author values('$authorname','0')");
 		$sth1->execute();
 		$sth1->finish();
 	}

@@ -10,12 +10,16 @@ use DBI();
 open(IN, "akaradi_uni.tex") or die "Can't open akaradi_uni.tex";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
+
+$sth_enc=$dbh->prepare("set names utf8");
+$sth_enc->execute();
+$sth_enc->finish();
+
 $sth11=$dbh->prepare("CREATE TABLE akaradi_table(
 akaradi varchar(5000), 
 akaradi_id int(10) auto_increment, primary key(akaradi_id))auto_increment=1001 ENGINE=MyISAM character set utf8 collate utf8_general_ci");
 $sth11->execute();
-$sth11->finish(); 
-
+$sth11->finish();
 
 $line = <IN>;
 
@@ -41,7 +45,7 @@ sub insert_word()
 	$words =~ s/'/\'/g;
 	$words =~ s/\\//g;
 
-	$sth12=$dbh->prepare("insert into akaradi_table values('$words','')");
+	$sth12=$dbh->prepare("insert into akaradi_table values('$words','0')");
 	$sth12->execute();
 	$sth12->finish();
 }

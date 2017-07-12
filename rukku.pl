@@ -11,6 +11,10 @@ open(IN, "Rigveda_uni.xml") or die "can't open Rigveda_uni.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
+$sth_enc=$dbh->prepare("set names utf8");
+$sth_enc->execute();
+$sth_enc->finish();
+
 $sth11=$dbh->prepare("CREATE TABLE Rukku_table(mandala int(6),
 sukta int(6),
 rukku int(6),
@@ -103,7 +107,7 @@ sub insert_article()
 	$text2 =~ s/'/\\'/g;
 	$text3 =~ s/'/\\'/g;
 
-	$sth1=$dbh->prepare("insert into Rukku_table values('$mandala','$sukta','$rukku','$rishi','$chandas','$devata','$text1','$text2','$text3',' ')");
+	$sth1=$dbh->prepare("insert into Rukku_table values('$mandala','$sukta','$rukku','$rishi','$chandas','$devata','$text1','$text2','$text3','0')");
 	$sth1->execute();
 
 	$sth1->finish();

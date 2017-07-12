@@ -11,6 +11,10 @@ open(IN,"toc_uni.xml") or die "can't open toc_uni.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
+$sth_enc=$dbh->prepare("set names utf8");
+$sth_enc->execute();
+$sth_enc->finish();
+
 $sth1=$dbh->prepare("CREATE TABLE Rig_Toc(
 book_id varchar(4), 
 btitle varchar(2000),
@@ -29,12 +33,17 @@ $scount = 0;
 while($line)
 {
 	chop($line);
-	if($line =~ /<book code="(.*)"[\s]+btitle="(.*)">/)
+	if($line =~ /<book code="(.*)"[\s]+btitle="(.*)"><\/book>/)
+	{
+		$book_id = $1;
+		$btitle = $2;
+		insert_to_db($book_id,$btitle);
+	}
+	elsif($line =~ /<book code="(.*)"[\s]+btitle="(.*)">/)
 	{
 		$book_id = $1;
 		$btitle = $2;
 	}
-	
 	elsif($line =~ /<s([1-4]+)[\s]+title="(.*)"[\s]+page="(.*)-(.*)">/)
 	{
 		$level = $1;
@@ -68,7 +77,7 @@ while($line)
 	{
 		print $line . "\n";
 	}
-$line = <IN>;	
+$line = <IN>;
 }
 
 close(IN);
@@ -82,7 +91,7 @@ sub insert_to_db()
 	$btitle =~ s/'/\\'/g;
 	$title =~ s/'/\\'/g;
 
-	$sth2=$dbh->prepare("insert into Rig_Toc values('$book_id','$btitle','$level','$title','$start_pages','$end_pages','')");
+	$sth2=$dbh->prepare("insert into Rig_Toc values('$book_id','$btitle','$level','$title','$start_pages','$end_pages','0')");
 	$sth2->execute();
 	$sth2->finish();
 }

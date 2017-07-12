@@ -32,10 +32,14 @@ while($ref1 = $sth1->fetchrow_hashref())
 	$triplets = '';
 	$sth=$dbh->prepare("select triplet from swara where word='$word'");
 	$sth->execute();
-	while ($ref = $sth->fetchrow_hashref())
+	while($ref = $sth->fetchrow_hashref())
 	{
 		$triplet = $ref->{'triplet'};
-		$triplets = $triplets . ";" . $triplet;
+		if($triplet != $tmp)
+		{
+			$triplets = $triplets . ";" . $triplet;
+			$tmp = $triplet;
+		}
 	}
 	$triplets =~ s/^;//;
 	

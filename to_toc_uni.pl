@@ -10,7 +10,7 @@ while($line)
 {
 	chop($line);
 	
-	if($line =~ /(.*)btitle="(.*)" ctitle="(.*)" cid="(.*)"/)
+	if($line =~ /(.*)btitle="(.*)" ctitle="(.*)" cid="(.*)" cname="(.*)"/)
 	{
 		$btitle = $2;
 		$btitle = gen_unicode($btitle);
@@ -114,7 +114,7 @@ sub gen_unicode()
 	$uni_str =~ s/---/&#x2014;/g;
 	$uni_str =~ s/--/&#x2013;/g;
 	$uni_str =~ s/\|/&#x007C;/g;
-	$uni_str =~ s/``/&#x201C;/g;	
+	$uni_str =~ s/``/&#x201C;/g;
 	$uni_str =~ s/''/&#x201D;/g;
 	$uni_str =~ s/`/&#x2018;/g;
 	$uni_str =~ s/'/&#x2019;/g;

@@ -11,6 +11,11 @@ open(IN, "89-1098_uni.txt") or die "Can't open 89-1098_uni.txt";
 #open(FPLOG, "insert_log.txt") or die "Can't open insert_log.txt";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
+
+$sth_enc=$dbh->prepare("set names utf8");
+$sth_enc->execute();
+$sth_enc->finish();
+
 $sth11=$dbh->prepare("CREATE TABLE triplet_index(
 index_id int(5), 
 mandala int(6),
@@ -18,7 +23,7 @@ sukta int(6),
 rukku int(6)) ENGINE=MyISAM character set utf8 collate utf8_general_ci");
 
 $sth11->execute();
-$sth11->finish(); 
+$sth11->finish();
 
 $line = <IN>;
 $ln = 1;

@@ -23,13 +23,13 @@ $sth11->execute();
 $sth11->finish(); 
 
 $line = <IN>;
-
 while($line)
 {
 	chop($line);
 	if($line =~ /<entry rukkuid="(.*)">/)
 	{
 		$triplet = $1;
+		#~ print $triplet . "\n";
 	}
 	elsif($line =~ /<word>(.*)<\/word>/)
 	{
