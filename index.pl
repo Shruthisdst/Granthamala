@@ -37,11 +37,7 @@ while($ref1 = $sth1->fetchrow_hashref())
 	while($ref = $sth->fetchrow_hashref())
 	{
 		$triplet = $ref->{'triplet'};
-		if($triplet != $tmp)
-		{
-			$triplets = $triplets . ";" . $triplet;
-			$tmp = $triplet;
-		}
+		$triplets = $triplets . ";" . $triplet;
 	}
 	$triplets =~ s/^;//;
 	
