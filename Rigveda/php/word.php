@@ -77,7 +77,7 @@ include("connect.php");
 
 $letter = $_GET['letter'];
 
-$query1 = "SELECT * from swara_index where word like '$letter%'";
+$query1 = "SELECT * from swara_index where word like '$letter%' order by alias_word";
 $result1 = $db->query($query1);
 $num_rows1 = $result1 ? $result1->num_rows : 0;
 

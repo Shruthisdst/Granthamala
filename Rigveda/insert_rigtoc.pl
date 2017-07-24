@@ -11,6 +11,10 @@ open(IN,"toc_uni.xml") or die "can't open toc_uni.xml\n";
 
 my $dbh=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd");
 
+$sth_enc=$dbh->prepare("set names utf8");
+$sth_enc->execute();
+$sth_enc->finish();
+
 $sth1=$dbh->prepare("CREATE TABLE Rig_Toc(
 book_id varchar(4), 
 btitle varchar(2000),
@@ -18,7 +22,7 @@ level int(2),
 title varchar(10000),
 start_pages varchar(20),
 end_pages varchar(20),
-slno int(6) auto_increment, primary key(slno)) auto_increment=10001 ENGINE=MyISAM");
+slno int(6) auto_increment, primary key(slno)) auto_increment=10001 ENGINE=MyISAM character set utf8 collate utf8_general_ci");
 
 $sth1->execute();
 $sth1->finish();
@@ -34,7 +38,11 @@ while($line)
 		$book_id = $1;
 		$btitle = $2;
 	}
-	
+	elsif($line =~ /<book code="(.*)"[\s]+btitle="(.*)"><\/book>/)
+	{
+		$book_id = $1;
+		$btitle = $2;
+	}
 	elsif($line =~ /<s([1-4]+)[\s]+title="(.*)"[\s]+page="(.*)-(.*)">/)
 	{
 		$level = $1;

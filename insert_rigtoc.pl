@@ -18,7 +18,7 @@ $sth_enc->finish();
 $sth1=$dbh->prepare("CREATE TABLE Rig_Toc(
 book_id varchar(4), 
 btitle varchar(2000),
-level int(2),
+level int(2) DEFAULT NULL,
 title varchar(10000),
 start_pages varchar(20),
 end_pages varchar(20),
@@ -75,13 +75,12 @@ while($line)
 	}
 	else
 	{
-		print $line . "\n";
+		#~ print $line . "\n";
 	}
 $line = <IN>;
 }
 
 close(IN);
-
 
 sub insert_to_db()
 {

@@ -14,8 +14,9 @@ $sth_enc->execute();
 $sth_enc->finish();
 
 $sth11=$dbh->prepare("CREATE TABLE swara_index(
-word varchar(100000), 
-triplet varchar(1000000)) ENGINE=MyISAM character set utf8 collate utf8_general_ci");
+word varchar(1000), 
+alias_word varchar(1000), 
+triplet text DEFAULT NULL) ENGINE=MyISAM character set utf8 collate utf8_general_ci");
 
 $sth11->execute();
 $sth11->finish(); 
@@ -24,11 +25,12 @@ my $dbh1=DBI->connect("DBI:mysql:database=$db;host=$host","$usr","$pwd") or die 
 $dbh1->{'mysql_enable_utf8'} = 1;
 $dbh1->do('set names utf8');
 
-$sth1=$dbh->prepare("select distinct word from swara order by word");
+$sth1=$dbh->prepare("select distinct word, alias_word from swara order by word");
 $sth1->execute();
 while($ref1 = $sth1->fetchrow_hashref())
 {
 	$word = $ref1->{'word'};
+	$alias_word = $ref1->{'alias_word'};
 	$triplets = '';
 	$sth=$dbh->prepare("select triplet from swara where word='$word'");
 	$sth->execute();
@@ -43,7 +45,7 @@ while($ref1 = $sth1->fetchrow_hashref())
 	}
 	$triplets =~ s/^;//;
 	
-	$sth2=$dbh->prepare("insert into swara_index values('$word','$triplets')");
+	$sth2=$dbh->prepare("insert into swara_index values('$word','$alias_word','$triplets')");
 	
 	$sth2->execute();
 	$sth2->finish();

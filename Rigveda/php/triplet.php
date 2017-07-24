@@ -30,7 +30,7 @@ include("common.php");
 $word = $_GET['word'];
 
 echo "<br/><br/>";
-echo "<span class=\"swarawordspan\">$word</span>";
+echo "<span class=\"wordspan\">$word</span>";
 echo "<br/><br/>";
 
 $query2 = "SELECT * from swara_index where word = '$word'";

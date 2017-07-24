@@ -16,8 +16,9 @@ $sth_enc->execute();
 $sth_enc->finish();
 
 $sth11=$dbh->prepare("CREATE TABLE swara(
-word varchar(100000), 
-triplet varchar(1000000)) ENGINE=MyISAM character set utf8 collate utf8_general_ci");
+word text DEFAULT NULL, 
+alias_word text DEFAULT NULL, 
+triplet text DEFAULT NULL) ENGINE=MyISAM character set utf8 collate utf8_general_ci");
 
 $sth11->execute();
 $sth11->finish(); 
@@ -47,8 +48,11 @@ sub insert_swara()
 	my($sth1);
 
 	$word =~ s/'/\\'/g;
+	$pada = $word;
+	$pada =~ s/॒//g;
+	$pada =~ s/॑//g;
 	
-	$sth1=$dbh->prepare("insert into swara values('$word','$triplet')");
+	$sth1=$dbh->prepare("insert into swara values('$word','$pada','$triplet')");
 	
 	$sth1->execute();
 	$sth1->finish();
