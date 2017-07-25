@@ -64,7 +64,7 @@ if($pada!='')
 {
 	if ($bl == "pada")
 	{
-		$query="SELECT * FROM pada_index where word like '$pada%'";
+		$query="SELECT * FROM swara_index where alias_word like '$pada%'";
 	}
 }
 if($mantra!='')
@@ -95,108 +95,96 @@ $num_results = $result ? $result->num_rows : 0;
 if($bl == "pada")
 {
 	echo "<div class=\"search-result\">ಫಲಿತಾಂಶಗಳು &#8212; $num_results</div>";
-    if($num_results > 0)
-    {
-        while($row1 = $result->fetch_assoc())
-        {
-            $word = $row1['word'];
-            $id = $row1['index_id'];
+	if($num_results > 0)
+	{
+		while($row1 = $result->fetch_assoc())
+		{
+			$word = $row1['word'];
+			$tripletGrp = $row1['triplet'];
+			$triplets = preg_split('/;/',$tripletGrp);
 
-            if($pada!='')
-            {
-                $query1 = "SELECT * from triplet_index where index_id = '$id'";
-            }
-            
-            $result1 = $db->query($query1);
-			$num_rows1 = $result1 ? $result1->num_rows : 0;
-            $quotient = intval($num_rows1 / 4);
-            $remainder = $num_rows1 % 4;
-            $column = 4;
-            if($remainder == 0)
-            {
-                $rows = $quotient;
-            }
-            else
-            {
-                $rows = $quotient + 1;
-            }
-                
-            if($num_rows1 > 0)
-            {
-                echo "<div class=\"wordspan gap-above-large\">$word</div>";
-                echo "<table>";
-                for($x=1;$x<=$rows;$x++)
-                {
-                    echo "<tr>";
-                    for($y=1;$y<=$column;$y++)
-                    {
-                        echo "<td class=\"triplet\">";
-                        $row2 = $result1->fetch_assoc();
-                        $mandala1 = $row2['mandala'];
-                        $sukta1 = $row2['sukta'];
-                        $rukku1 = $row2['rukku'];
-                        if($vol_no != '')
-                        {
-                            $query4 = "SELECT * FROM mandala_table where mandala = '$mandala1' and sukta = '$sukta1' and rukku = '$rukku1' and vol_no = '$vol_no'";
-                        }
-                        else
-                        {
-                            $query4 = "SELECT * FROM mandala_table where mandala = '$mandala1' and sukta = '$sukta1' and rukku = '$rukku1'";
-                        }
-                        $result4 = $db->query($query4);
-                        $num_rows4 = $result4 ? $result4->num_rows : 0;
-                        if($num_rows4 > 0)
-                        {
-							$row4 = $result4->fetch_assoc();
+			echo "<div class=\"wordspan gap-above-large\">$word</div>";
+			if(count($triplets))
+			{
+				echo "<table>";
+				for($i=0;$i<count($triplets);++$i)
+				{
+					if(!$i)
+					{
+						echo "<tr>";
+					}
+					elseif(!($i % 4))
+					{
+						echo "</tr>";
+						echo "<tr>";
+					}
+					$ids = explode('.', $triplets[$i]);
+					$mandala = $ids[0];
+					$sukta = $ids[1];
+					$rukku = $ids[2];
+					//~ echo $mandala . "=>" . $sukta . "=>" . $rukku . "<br />";
+					if($vol_no != '')
+					{
+						$query4 = "SELECT * FROM mandala_table where mandala = '$mandala' and sukta = '$sukta' and rukku = '$rukku' and vol_no = '$vol_no'";
+					}
+					else
+					{
+						$query4 = "SELECT * FROM mandala_table where mandala = '$mandala' and sukta = '$sukta' and rukku = '$rukku'";
+					}
+					$result4 = $db->query($query4);
+					$num_rows4 = $result4 ? $result4->num_rows : 0;
+					if($num_rows4 > 0)
+					{
+						$row4 = $result4->fetch_assoc();
 
-                            $page4 = $row4['page_no'];
-                            $vol4 = $row4['vol_no'];
+						$page4 = $row4['page_no'];
+						$vol4 = $row4['vol_no'];
                             
-                            $query5 = "SELECT * from prelim_table where vol_no = '$vol4'";
-                            $result5 = $db->query($query5);
-                            $num_rows5 = $result5 ? $result5->num_rows : 0;
-                            if($num_rows5 > 0)
-                            {
-                                $row5 = $result5->fetch_assoc();
-                                $no5 = $row5['no_prelims'];
-                                $page_num5 = $page4 - $no5;
-                                if($page_num5 < 10)
-                                {
-                                    $page_no5 = "000".$page_num5;
-                                }
-                                elseif($page_num5 < 100)
-                                {
-                                    $page_no5 = "00".$page_num5;
-                                }
-                                elseif($page_num5 < 1000)
-                                {
-                                    $page_no5 = "0".$page_num5;
-                                }
-                                else
-                                {
-                                    $page_no5 = $page_num5;
-                                }
+						$query5 = "SELECT * from prelim_table where vol_no = '$vol4'";
+						$result5 = $db->query($query5);
+						$num_rows5 = $result5 ? $result5->num_rows : 0;
+						if($num_rows5 > 0)
+						{
+							$row5 = $result5->fetch_assoc();
+							$no5 = $row5['no_prelims'];
+							$page_num5 = $page4 - $no5;
+							if($page_num5 < 10)
+							{
+								$page_no5 = "000".$page_num5;
+							}
+							elseif($page_num5 < 100)
+							{
+								$page_no5 = "00".$page_num5;
+							}
+							elseif($page_num5 < 1000)
+							{
+								$page_no5 = "0".$page_num5;
+							}
+							else
+							{
+								$page_no5 = $page_num5;
+							}
 
-                                if($vol4 < 10)
-                                {
-                                    $vnum4 = "00" . $vol4;
-                                }
-                                else
-                                {
-                                    $vnum4 = "0" . $vol4;
-                                }
-                                $vnum4 = get_rigBookid($vnum4);
-                                echo "<a href=\"../../Volumes/$vnum4/index.djvu?djvuopts&amp;page=$page_no5.djvu&amp;zoom=page\" target=\"_blank\">$mandala1-$sukta1-$rukku1</a>";
-                            }
-                        }
-                        echo "</td>";
-                    }
-                    echo "</tr>";
-                }
-                echo "</table>";
-            }
-        }
-    }
+							if($vol4 < 10)
+							{
+								$vnum4 = "00" . $vol4;
+							}
+							else
+							{
+								$vnum4 = "0" . $vol4;
+							}
+							$vnum4 = get_rigBookid($vnum4);
+							echo "<td>";
+							echo "<div class=\"triplet\"><a href=\"../../Volumes/$vnum4/index.djvu?djvuopts&amp;page=$page_no5.djvu&amp;zoom=page\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
+							echo "</td>";
+						}
+					}
+				}
+				echo "</tr>";
+				echo "</table>";
+			}
+		}
+	}
     else
     {
         echo"<span class=\"goback\">ಫಲಿತಾಂಶಗಳು ಲಭ್ಯವಿಲ್ಲ</span><br /><br />";
