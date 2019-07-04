@@ -6,14 +6,14 @@
     <title>$book['Title']</title>
     <meta charset="UTF-8"/>
     <link rel="shortcut icon" type="image/ico" href="../../images/logo.ico" />
-    <link rel="stylesheet" type="text/css" href="../static/BookReader/BookReader.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/BookReader/BookReader.css?v=1.0"/>
     <script type="text/javascript" src="../static/BookReader/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="../static/BookReader/jquery-ui-1.8.5.custom.min.js"></script>
     <script type="text/javascript " src="../static/BookReader/dragscrollable.js"></script>
     <script type="text/javascript" src="../static/BookReader/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="../static/BookReader/jquery.ui.ipad.js"></script>
     <script type="text/javascript" src="../static/BookReader/jquery.bt.min.js"></script>
-    <script type="text/javascript" src="../static/BookReader/BookReader.js"></script>
+    <script type="text/javascript" src="../static/BookReader/BookReader.js?v=1.0"></script>
     
     <?php
 		$bookID = $_GET['bookID'];
@@ -38,7 +38,7 @@
 		}
 	
 		$book["imglist"]=array_values($book["imglist"]);
-		$book["Title"] = "ಗ್ರಂಥರತ್ನಮಾಲಾ";
+		$book["Title"] = "ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ಗ್ರಂಥರತ್ನಮಾಲಾ";
 		$book["TotalPages"] = count($book["imglist"]);
 		$book["SourceURL"] = "";
 		$result = array_keys($book["imglist"], $page);
@@ -62,6 +62,5 @@ $.ajax({url: "filesRemover.php", async: true});
     
 </div>
 <script type="text/javascript" src="../static/BookReaderJSSimple.js"></script>
-<span>suresh</span>
 </body>
 </html>

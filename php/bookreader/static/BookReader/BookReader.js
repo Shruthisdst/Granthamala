@@ -44,7 +44,7 @@ function BookReader() {
     this.reduce  = 4;
     this.padding = 10;          // Padding in 1up
 
-    this.mode    = this.constMode1up;
+    this.mode    = this.constMode2up;
     this.ui = 'full';           // UI mode
     this.uiAutoHide = false;    // Controls whether nav/toolbar will autohide
 

@@ -193,6 +193,7 @@ a {
     /* float: left; */
     /* margin: 0 10px 0 5px; */
     font-family: "Lucida Grande","Arial",sans-serif;
+    text-align: center;
     color: #333;
     height: 100%;
     line-height: 38px;
@@ -204,9 +205,10 @@ a {
     padding-top: 3px;
 }
 #BRreturn a {
-    font-size: 15px;
+    font-size: 18px;
+    text-decoration: none;
     display: block;
-    color: #036daa;
+    color: #800000;
     /* height: 18px; */
     overflow: hidden;
 }
