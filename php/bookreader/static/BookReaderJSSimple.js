@@ -38,7 +38,6 @@ br.getPageURI = function(index, reduce, rotate) {
 		//~  to display loading popup
 		br.showProgressPopup('<img id="searchmarker" src="'+this.imagesBaseURL + 'marker_srch-on.png'+'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loading...');
 		$.ajax({type: "POST", url: "../templates/bgconvert.php?level="+level+"&index="+index+"&bookID="+book.bookID+"&imgurl="+book.imgurl+"&mode="+this.mode, async: true , success :function(data){br.updater(data);} , data : {book:this.book.imglist}});
-		console.log(book.bookID + "suresh");
 		return br.imagesBaseURL + "transparent.png";
 	}
 	else
@@ -49,13 +48,7 @@ br.getPageURI = function(index, reduce, rotate) {
 	
 }
 br.updater = function(result) {
-	//~  to remove popup of image loading
-	setTimeout(function(){
-		$(br.popup).fadeOut('slow', function() {
-			br.removeProgressPopup();
-		})        
-	},br.timeout);
-        
+	    
 	result = jQuery.parseJSON(result);
 	if(result.mode == 2)
 	{
@@ -69,6 +62,13 @@ br.updater = function(result) {
 	{
 		$(result.id+" img").attr("src", result.img);
 	}
+
+	//~  to remove popup of image loading
+	setTimeout(function(){
+		$(br.popup).fadeOut('slow', function() {
+			br.removeProgressPopup();
+		})        
+	},br.timeout);
 }
 br.getBookId = function() {
 	return book.lang;

@@ -61,6 +61,6 @@ $.ajax({url: "filesRemover.php", async: true});
 <div id="BookReader">
     
 </div>
-<script type="text/javascript" src="../static/BookReaderJSSimple.js"></script>
+<script type="text/javascript" src="../static/BookReaderJSSimple.js?v=1.0"></script>
 </body>
 </html>
