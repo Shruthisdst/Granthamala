@@ -30,7 +30,7 @@
 	$array['mode'] = $mode;
 	$array['img'] = $imgurl."/".$img[0].".jpg";
 	
-	echo json_encode($array);
+	echo json_encode($array, JSON_UNESCAPED_SLASHES);
 	//~ Update manifest file to download the request file.
 	$myfile = fopen("appcache.manifest", "w") or die("Unable to open file!!!");
 	fwrite($myfile,"CACHE MANIFEST\n");
