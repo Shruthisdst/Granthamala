@@ -84,7 +84,7 @@ if($num_rows > 0)
 			echo "<ul id=\"ul_id$ul_id\">\n";
 			array_push($p_stack,$ul_id);
 			$li_id++;
-			$deffer = display_tabs($level) . "<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+			$deffer = display_tabs($level) . "<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../../php/bookReader.php?bookID=$book_id&page=$pages&bookreaderTitle=\" target=\"_blank\">$title</a></span>";
 			$first = 0;
 		}
 		elseif($level > $stack[sizeof($stack)-1])
@@ -97,7 +97,7 @@ if($num_rows > 0)
 			array_push($stack,$level);
 			array_push($p_stack,$ul_id);
 			$deffer = "\n" . display_tabs(($level-1)) . "<ul class=\"dnone\" id=\"ul_id$ul_id\">\n";
-			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s2\"><a href=\"../../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s2\"><a href=\"../../php/bookReader.php?bookID=$book_id&page=$pages&bookreaderTitle=\" target=\"_blank\">$title</a></span>";
 		}
 		elseif($level < $stack[sizeof($stack)-1])
 		{
@@ -112,7 +112,7 @@ if($num_rows > 0)
 			}
 			$li_id++;
 			$deffer = display_tabs($level) . "</li>\n";
-			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../../php/bookReader.php?bookID=$book_id&page=$pages&bookreaderTitle=\" target=\"_blank\">$title</a></span>";
 		}
 		elseif($level == $stack[sizeof($stack)-1])
 		{
@@ -120,7 +120,7 @@ if($num_rows > 0)
 			echo $deffer;
 			$li_id++;
 			$deffer = "</li>\n";
-			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></span>";
+			$deffer = $deffer . display_tabs($level) ."<li id=\"li_id$li_id\">:rep:<span class=\"s1\"><a href=\"../../php/bookReader.php?bookID=$book_id&page=$pages&bookreaderTitle=\" target=\"_blank\">$title</a></span>";
 		}
 	}
 

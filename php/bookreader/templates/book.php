@@ -38,7 +38,8 @@
 		}
 	
 		$book["imglist"]=array_values($book["imglist"]);
-		$book["Title"] = "ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ಗ್ರಂಥರತ್ನಮಾಲಾ";
+		if(isset($_GET['bookreaderTitle'])) $book["Title"] = 'ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ವೇದರತ್ನಮಾಲಾ';
+		else $book["Title"] = "ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ಗ್ರಂಥರತ್ನಮಾಲಾ";
 		$book["TotalPages"] = count($book["imglist"]);
 		$book["SourceURL"] = "";
 		$result = array_keys($book["imglist"], $page);
