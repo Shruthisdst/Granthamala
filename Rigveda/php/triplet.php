@@ -111,7 +111,7 @@ if($num_rows2 > 0)
 								}
 								$vnum = get_rigBookid($vnum);
 								echo "<td>";
-								echo "<div class=\"triplet\"><a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
+								echo "<div class=\"triplet\"><a href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
 								echo "</td>";
 							}
 						}

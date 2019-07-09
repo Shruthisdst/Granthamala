@@ -90,7 +90,7 @@ if($num_rows1 > 0)
 					$vnum = "0" . $vol_no;
 				}
 				$vnum = get_rigBookid($vnum);
-				echo "<li class=\"rukku\"><a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu&amp;zoom=page\" target=\"_blank\">$text1...</a></li>";
+				echo "<li class=\"rukku\"><a href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$text1...</a></li>";
 			}
 		}
 	}

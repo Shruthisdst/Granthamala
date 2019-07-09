@@ -175,7 +175,7 @@ if($bl == "pada")
 							}
 							$vnum4 = get_rigBookid($vnum4);
 							echo "<td>";
-							echo "<div class=\"triplet\"><a href=\"../../Volumes/$vnum4/index.djvu?djvuopts&amp;page=$page_no5.djvu&amp;zoom=page\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
+							echo "<div class=\"triplet\"><a href=\"../../php/bookReader.php?bookID=$vnum4&page=$page_no5&bookreaderTitle=&\" target=\"_blank\">$mandala-$sukta-$rukku</a></div>";
 							echo "</td>";
 						}
 					}
@@ -268,15 +268,15 @@ if($bl == "mantra")
                                 echo "<li class=\"man\">";
                                 if($text3 != '')
                                 {
-                                    echo "<a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu&amp;zoom=page\" target=\"_blank\">$text1&nbsp;|<br/>$text2&nbsp;|<br/>$text3&nbsp;||$rukku||</a>";
+                                    echo "<a href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$text1&nbsp;|<br/>$text2&nbsp;|<br/>$text3&nbsp;||$rukku||</a>";
                                 }
                                 elseif($text2 != '')
                                 {
-                                    echo "<a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu&amp;zoom=page\" target=\"_blank\">$text1&nbsp;|<br/>$text2&nbsp;||$rukku||</a>";
+                                    echo "href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$text1&nbsp;|<br/>$text2&nbsp;||$rukku||</a>";
                                 }
                                 else
                                 {
-                                    echo "<a href=\"../../Volumes/$vnum/index.djvu?djvuopts&amp;page=$page_no.djvu&amp;zoom=page\" target=\"_blank\">$text1&nbsp;||$rukku||</a>";
+                                    echo "<a href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$text1&nbsp;||$rukku||</a>";
                                 }
                                 echo "</li></ul>";
                             }
@@ -316,7 +316,7 @@ if($bl == "title")
             $title1 = preg_replace("/$title/", "<span style=\"color: red\">$title</span>", $title1);
             if ($bl == "title")
             {
-                echo "<li class=\"tocspan\"><a href=\"../../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title1</a></li>";
+                echo "<li class=\"tocspan\"><a href=\"../../php/bookReader.php?bookID=$book_id&page=$pages&bookreaderTitle=&\" target=\"_blank\">$title1</a></li>";
             }
         }
         echo "</ul>";
