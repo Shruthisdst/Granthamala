@@ -130,7 +130,7 @@ if($num_rows)
                     }
                     else
                     {
-                        echo "\n<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>";
+                        echo "\n<li class=\"title_list\"><a href=\"bookReader.php?bookID=$book_id\" target=\"_blank\">$btitle</a></li>";
                         $b_id = $book_id;
                     }
                 }
@@ -159,7 +159,7 @@ if($num_rows)
                 $title = preg_replace("/$t_title/", "<span style=\"color: red\">$t_title</span>", $title);
             }
 
-            echo "\n<li class=\"title_list\"><a href=\"../Volumes/$book_id/index.djvu?djvuopts&amp;page=$pages.djvu&amp;zoom=page\" target=\"_blank\">$title</a></li>";
+            echo "\n<li class=\"title_list\"><a href=\"bookReader.php?bookID=$book_id&page=$pages\" target=\"_blank\">$title</a></li>";
         }
     }
     echo "</ul>";
