@@ -272,7 +272,7 @@ if($bl == "mantra")
                                 }
                                 elseif($text2 != '')
                                 {
-                                    echo "href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$text1&nbsp;|<br/>$text2&nbsp;||$rukku||</a>";
+                                    echo "<a href=\"../../php/bookReader.php?bookID=$vnum&page=$page_no&bookreaderTitle=&\" target=\"_blank\">$text1&nbsp;|<br/>$text2&nbsp;||$rukku||</a>";
                                 }
                                 else
                                 {
