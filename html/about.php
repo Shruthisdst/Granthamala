@@ -13,21 +13,21 @@
         <div class="header">
             <ul class="nav">
                 <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
 				<li><a class="nav_kan" href="granthamala.html">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="active nav_kan" href="#">ಒಳನೋಟ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="nav_kan" href="anuvadakaru.html">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
             </ul>
         </div>
         <div class="heading">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ   ಗ್ರಂಥರತ್ನಮಾಲಾ</div>
         <div class="mainbody">
-            <img class="image" src="images/odeyar.gif"  alt="images"/>
+            <img class="image" src="images/wodeyar.jpg"  alt="images"/>
             <p class="text">ಯದುವಂಶ ಪಯಃ  ಪಾರಾವಾರಸುಧಾಕರರೂ ಸತ್ಸಂಪ್ರದಾಯ ವೈದಿಕವಿದ್ಯಾವರ್ಧಕರೂ ಮೈಸೂರು ದೇಶವನ್ನಾಳುವ ಧರ್ಮಪ್ರಭುಗಳೂ ಆದ  ಶ್ರೀಮನ್ಮಹಾರಾಜ&nbsp;&nbsp;<span class="textbf">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ಒಡೆಯರ್ ಬಹದ್ದೂರ್</span>, ಜಿ.ಸಿ.ಎಸ್.ಐ.ರವರು.</p>
             <p class="article">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ಗ್ರಂಥರತ್ನಮಾಲೆಯಲ್ಲಿ  ಪ್ರಕಟವಾದ ಪುರಾಣಗಳ ಎಲ್ಲಾ ಸಂಪುಟಗಳು  ಇಲ್ಲಿ ಲಭ್ಯ. ಈ ಗ್ರಂಥಮಾಲೆಗೆ ಸಂಬಂಧಿಸಿದಂತೆ
                         ಗ್ರಂಥಲೋಕ  ನಿಯತ ಕಾಲಿಕೆಯಲ್ಲಿ ಏಪ್ರಿಲ್  1985ರಲ್ಲಿ ಪ್ರಕಟವಾದ&nbsp;&nbsp;<span class="auth_name"><a href="ananta.html">ಡಾ|| ಎನ್. ಅನಂತರಂಗಾಚಾರ್ </a></span>ಹಾಗೂ <span class="auth_name"><a href="nagaraj.html">ಡಾ|| ಎಚ್.ವಿ. ನಾಗರಾಜರಾವ್ </a></span>ಅವರ ಲೇಖನಗಳು ಇಲ್ಲಿವೆ.</p>
