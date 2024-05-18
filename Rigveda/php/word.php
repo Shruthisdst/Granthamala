@@ -111,7 +111,6 @@ if($num_rows1)
 			echo "</td>";
 		}
 		echo "</tr>";
-
 	}
 	echo "</table>";
 }

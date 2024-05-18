@@ -144,7 +144,7 @@ if($num_rows1 > 0)
 	while($row = $result1->fetch_assoc())
 	{
 		$mandala =$row['mandala'];
-		echo "<h3 id=\"man$mandala\"><span style=\"font-size:1.2em;margin-left:1em;\">ಮಂಡಲ&nbsp;".$number_name{intval($mandala)}."</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"top\"><a href=\"#top\">Back to Top</a></span></h3><br/>";
+		echo "<h3 id=\"man$mandala\"><span style=\"font-size:1.2em;margin-left:1em;\">ಮಂಡಲ&nbsp;".$number_name[intval($mandala)]."</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"top\"><a href=\"#top\">Back to Top</a></span></h3><br/>";
 
 		$query2 = "select distinct sukta from mandala_table where mandala = '$mandala'";
 		$result2 = $db->query($query2);

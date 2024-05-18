@@ -8,6 +8,11 @@
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="js/treeview.js"></script>   
 	<title>ಗ್ರಂಥರತ್ನಮಾಲಾ</title>
+    <style>
+        .nav_kan a li{
+            font-size: 1.7em;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,7 +61,6 @@ $author_result = $db->query($author_query);
 $author_num_rows = $author_result ? $author_result->num_rows : 0;
 $authrow = $author_result->fetch_assoc();
 $authorname = $authrow['authorname'];
-
 
 if($num_rows > 0)
 {

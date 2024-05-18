@@ -12,19 +12,22 @@ body{
 	font-size: 1em;
 	padding-bottom:10px;
 	font-family: nudi;
-	 line-height: 1.2; 
+	line-height: 1.2; 
+	background-image: url("../images/images.jpeg");
+	background-repeat: repeat;
 }
 .page{
 	background-color: #F6F2CD;
 	width: 60.4em;
-	min-height: 53em;
+	min-height: 60em;
 	border: 1px solid #C0C0C0;
 	margin: auto;
 	-moz-box-shadow: 0px 0px 30px #EBC19D;
     -webkit-box-shadow: 0px 0px 20px #EBC19D;
-    box-shadow: 0px 0px 20px #C0C0C0;
+    box-shadow: 0px 0px 20px #050505;
     -moz-border-radius: 5px 5px 5px 5px;
     -webkit-border-radius: 5px 5px 5px 5px;
+	background-image: url('../images/texture.jpeg');
 }
 .header
 {
@@ -54,7 +57,7 @@ body{
 }
 .nav li a {
 	color: #F6F2CD;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	font-family: nudi;
 	font-weight:bold;
 	text-decoration: none;
@@ -98,6 +101,7 @@ p{
 	margin: 1em 2em 1em 2em;
 	text-align: justify;
 	font-family: nudi;
+	font-size: 1.4em;
 
 }
 .akara{
@@ -110,10 +114,10 @@ p{
 }
 .main_title{
 	text-align: center;
-	font-size: 2em;
+	font-size: 2.6em;
 	font-family: nudi;
 	padding-top: 1em;
-	color: #CC6600;
+	color: rgb(3, 18, 66);
 	
 }
 .sampadaka{
@@ -148,6 +152,7 @@ p{
 	font-weight: bold;
 	line-height: 2.7;
 	font-family: nudi;
+	font-size: 1.15em;
 }
 .veda{
 	text-align: center;
@@ -169,6 +174,7 @@ p{
 	font-weight: bold;
 	padding-top: 0.5em;
 	font-family: nudi;
+	
 }
 .associate{
 	text-align: center;
@@ -177,6 +183,7 @@ p{
 	padding-top: 0.5em;
 	font-family: nudi;
 	line-height: 1.5;
+	
 }
 .mandali{
 	text-align: center;
@@ -186,7 +193,7 @@ p{
 	font-family: nudi;
 }
 .names li .subspan{
-	font-size: 0.80em;
+	font-size: 1.4em;
 	color:  #7A5200;
 	font-family: nudi;
 }
@@ -210,7 +217,7 @@ p{
 	font-family: nudi;
 }
 .break{
-	font-size: 0.80em;
+	font-size: 1.15em;
 	color:  #7A5200;
 	margin: -1em 0em 0em 1.7em;
 	font-family: nudi;
@@ -229,20 +236,21 @@ p{
 .list li a{
 	text-decoration: none;
 	color: #333300;
+	font-size: 1.3em;
 }
 .list li a:hover{
 	text-decoration: underline;
+	
 }
 .list li {
 	color: #333300;
-	
-	font-size: 1.4em;
+	font-size: 1.3em;
 	margin: 1em 0em -1.8em 12em;
 	padding-top: 2em;
 	font-family: nudi;
 }
 .volume{
-	margin:  2em 0em 0em 8em;
+	margin:  2em 0em 0em 5.5em;
 }
 .volume tr td{
 	color: #003366;
@@ -254,6 +262,7 @@ p{
 .volume a{
 	text-decoration: none;
 	color: #003366;
+	font-size: 1.2em;
 }
 .volume a:hover{
 	text-decoration: underline;
@@ -324,7 +333,7 @@ p{
 
 .s1 a{
 	color: #663300;
-	font-size: 1em;
+	font-size: 1.2em;
 	font-family: nudi;
 }
 .s1 a:hover{
@@ -526,6 +535,7 @@ h3{
 .pada a{
 	text-decoration: none;
 	color: #522900;
+	font-size: 1.15em;
 }
 .pada a:hover{
 	text-decoration: underline;
@@ -569,13 +579,13 @@ h3{
 .archive_title{
 	font-weight: bold;
 	text-align: center;
-	
 	margin-bottom: 1em;
+	font-size: 1.8em;
 }
 .archive_holder{
 	float: left;
-	width: 46em;
-	margin: 2em 0em 0em 6.5em;
+	width: 55em;
+	margin: 2em 0em 0em 2.15em;
 	padding: 1.25em 0 1em 1em;
 	background-color: #F5D6CC;
 	box-shadow: 0px 0px 2px #999999;
@@ -585,7 +595,7 @@ h3{
 select{
 	background: none;
 	border: 1px solid #B8860B;
-	font-size: 0.9em;
+	font-size: 1.4em;
 	margin: 0em 0em 1em 0.50em;
 }
 #kbd{
@@ -601,6 +611,7 @@ select{
 	padding: 0px;
 	text-align: center;
 	cursor:pointer;
+	font-size: 1.2em;
 }
 .keys:HOVER{
 	background-color: #F6F2CD;
@@ -618,10 +629,10 @@ select{
 	
 }
 .titlespan{
-	
+	font-size: 1.4em;
 }
 .sleft{
-	
+	font-size: 1.4em;
 }
 .search-result{
 	font-size: 1.5em;
@@ -681,7 +692,7 @@ input{
 }
 input[type=submit], input[type=reset]{
 	padding: 5px 20px 0 20px;
-	font-size: 0.9em;
+	font-size: 1.4em;
 }
 input[type=text]{
 	padding: 5px 0px 5px 5px;
@@ -701,4 +712,7 @@ input[type=text]{
 }
 .starting_page a:hover{
     text-decoration: none;
+}
+.auth p{
+	font-size: 1.15em;
 }

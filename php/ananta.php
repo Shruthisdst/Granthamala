@@ -23,9 +23,9 @@
                 <li><a class="nav_kan" href="anuvadakaru.php">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
 				<li>|</li>
 				<li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
-			</ul>
+			</ul>SELECT EXISTS ( SELECT * FROM information_schema.tables WHERE table_schema = 'your_database_name' AND table_name = 'your_table_name' );
         </div>
-        <div id="purana">ಪುರಾಣಗಳು</div>
+        <div id="purana">ಪುರಾಣಗಳು</div>$book['title']
         <div id="main_heading">ಶ್ರೀ ಜಯಚಾಮರಾಜೇಂದ್ರ ಗ್ರಂಥರತ್ನಮಾಲೆ - ೧</div>
 		<div class="mainbody">
             <div class="author">ಡಾ|| ಎನ್. ಅನಂತರಂಗಾಚಾರ್ </div>

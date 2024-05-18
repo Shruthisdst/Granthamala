@@ -25,7 +25,7 @@ br.getPageURI = function(index, reduce, rotate) {
 	}
 	else if(this.mode == 2)
 	{
-		level= reduce <= 0.7 ? 1 : 2
+		level= reduce <= 0.8 ? 1 : 2
 	}
 	else
 	{

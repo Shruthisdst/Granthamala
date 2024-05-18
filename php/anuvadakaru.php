@@ -74,7 +74,7 @@
                     <span class="purana_name">
                         <a href="granthagalu.php?ctitle=ನರಸಿಂಹ%20ಪುರಾಣ">ನರಸಿಂಹ ಪುರಾಣ</a>
                     </span>
-                </li>
+                </li>ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ
 
                 <li><span  class="authname">ಶ್ರೀ ಬೇಲದಕೆರೆ ಸೂರ್ಯನಾರಾಯಣ ಶಾಸ್ತ್ರಿ</span><br />
                     <span class="purana_name">
@@ -120,7 +120,7 @@
                         <a href="treeview.php?book_id=227">ಆದಿಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಲಿಂಗಮಹಾಪುರಾಣ"> ಶ್ರೀ ಲಿಂಗಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
                         <a href="treeview.php?book_id=004">ಪಂಚೋಪನಿಷದಃ</a>&nbsp;;&nbsp;
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀದೇವೀಭಾಗವತಂ%20ಮಹಾಪುರಾಣ"> ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;<br />
+                        <a href="granthagalu.php?ctitle=ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ"> ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ </a>&nbsp;&nbsp;;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ%20-%20ಸೂತಸಂಹಿತಾ"> ಶ್ರೀಮತ್ಸ್ಕಾಂದಪುರಾಣಾಂತರ್ಗತಾ - ಸೂತಸಂಹಿತಾ</a>&nbsp;;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ತ್ರಿಪುರಾರಹಸ್ಯ"> ಶ್ರೀ ತ್ರಿಪುರಾರಹಸ್ಯ</a>
                     </span>
@@ -153,7 +153,7 @@
 
                 <li><span  class="authname">ಶ್ರೀ ಮೋಟಗಾನಹಳ್ಳಿ ಸುಬ್ರಹ್ಮಣ್ಯ ಶಾಸ್ತ್ರೀ</span><br />
                     <span class="purana_name">
-                        <a href="granthagalu.php?ctitle=ಶ್ರೀಸ್ಕಾಂದಮಹಾಪುರಾಣ"> ಶ್ರೀ ಸ್ಕಾಂದಮಹಾಪುರಾಣ</a>&nbsp;;&nbsp;
+                        <a href="granthagalu.php?ctitle=ಶ್ರೀಸ್ಕಾಂದಮಹಾಪುರಾಣ"> ಶ್ರೀ ಸ್ಕಾಂದಮಹಾಪುರಾಣ</a>&nbsp;&nbsp;
                         <a href="granthagalu.php?ctitle=ಶ್ರೀ%20ಲಲಿತೋಪಾಖ್ಯಾನಂ"> ಶ್ರೀ ಲಲಿತೋಪಾಖ್ಯಾನಂ</a>
                     </span>
                 </li>
@@ -180,6 +180,19 @@
                 <li><span  class="authname">ಶ್ರೀ ಮಣಿಕುಂಡಲಂ ವೆಂಕಟೇಶ ಶಾಸ್ತ್ರೀ ಎಸ್.</span><br />
                     <span class="purana_name">
 						ಯೋಗವಾಸಿಷ್ಠ <span class="smallFont">(ಸಂಪುಟಗಳು: <a href="treeview.php?book_id=176">5</a>, <a href="treeview.php?book_id=177">6</a>, <a href="treeview.php?book_id=178">7</a>, <a href="treeview.php?book_id=179">8</a>, <a href="treeview.php?book_id=180">9</a>, <a href="treeview.php?book_id=182">11</a>, <a href="treeview.php?book_id=183">12</a>, <a href="treeview.php?book_id=184">13</a>)</span>
+                    </span>
+                </li>
+
+                <li><span  class="authname">ಶ್ರೀ ಸಚ್ಚಿದಾನಂದೇಂದ್ರ ಸರಸ್ವತಿ ಮಹಾಸ್ವಾಮಿಗಳು (ಅ.ಪ್ರ.ಕಾ) ಹೊಳೆನರಸೀಪುರ</span><br />
+                <span class="purana_name">
+                        <a href="granthagalu.php?ctitle=ಉಪನಿಷದ್ಭಾಷ್ಯಗಳು_೧">ಉಪನಿಷದ್ಭಾಷ್ಯಗಳು_೧ (ಈ,ಕೇ,ಕಾ);</a>&nbsp;&nbsp;
+                        <a href="granthagalu.php?ctitle=ಉಪನಿಷದ್ಭಾಷ್ಯಗಳು_೨">ಉಪನಿಷದ್ಭಾಷ್ಯಗಳು_೨ (ಐ,ತೈ);</a>
+                        <a href="granthagalu.php?ctitle=ಉಪನಿಷದ್ಭಾಷ್ಯಗಳು_೩">ಉಪನಿಷದ್ಭಾಷ್ಯಗಳು_೩ (ಪ್ರ,ಮುಂ,ಮಾಂ);</a>
+                        <a href="granthagalu.php?ctitle=ಶ್ರೀಮದ್ಭಗವದ್ಗೀತೆ">ಭಗವದ್ಗೀತಾ ಭಾಷ್ಯ ;</a>
+                        <a href="granthagalu.php?ctitle=ಪ್ರಕರಣಗಳು-೧">ಪ್ರಕರಣಗಳು - ೧ ;</a>
+                        <a href="treeview.php?book_id=341"> ಬ್ರಹ್ಮಸೂತ್ರಭಾಷ್ಯ ;</a>
+                        <a href="granthagalu.php?ctitle=ಬೃಹದಾರಣ್ಯಕೋಪನಿಷತ್ತು">ಬೃಹದಾರಣ್ಯಕ ಉಪನಿಷದ್ಭಾಷ್ಯ ;</a>
+                        <a href="treeview.php?book_id=338"> ಛಾಂದೋಗ್ಯಪನಿಷದ್ಭಾಷ್ಯ ;</a>
                     </span>
                 </li>
             </ul>

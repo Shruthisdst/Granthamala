@@ -1,7 +1,7 @@
 <?php
 require_once("html/connect.php");
 
-$query = "select distinct ctitle, cid from GM_Toc order by ctitle";
+$query = "SELECT DISTINCT ctitle, cid FROM GM_Toc ORDER BY ctitle";
 $result = $db->query($query); 
 $num_rows = $result ? $result->num_rows : 0;
 

@@ -32,12 +32,14 @@
 
 <?php
 include("connect.php");
-
 $ctitle = $_GET['ctitle'];
+$query = "SELECT DISTINCT book_id, btitle FROM GM_Toc WHERE ctitle = '$ctitle'";
 
-$query = "select distinct book_id, btitle from GM_Toc where ctitle = '$ctitle'";
 $result = $db->query($query);
-$num_rows = $result ? $result->num_rows : 0;
+
+if($result){
+	$num_rows = $result->num_rows;
+// $num_rows = $result ? $result->num_rows : 0;
 
 if($num_rows > 0)
 {
@@ -45,18 +47,20 @@ if($num_rows > 0)
 	while($row = $result->fetch_assoc())
 	{
 		$book_id = $row['book_id'];
-        $btitle = $row['btitle'];
+        $btitle = $row['btitle'];		
         $btitle = preg_replace('/-/'," &ndash; ", $btitle);
-
-        $query1 = "select * from GM_Toc where book_id = '$book_id'";
+		
+        $query1 = "SELECT * FROM GM_Toc WHERE book_id = '$book_id'";		
         $result1 = $db->query($query1);
         $num_rows1 = $result1 ? $result1->num_rows : 0;
+
         if($num_rows1 > 0)
         {
             $row1 = $result1->fetch_assoc();
             $level = $row1['level'];
+
 			if($level == 0)
-			{
+			{	
 				echo "\n<li class=\"book_title\"><a href=\"../Volumes/$book_id/index.djvu\" target=\"_blank\">$btitle</a></li>";
 			}
 			else
@@ -67,6 +71,8 @@ if($num_rows > 0)
     }
     echo "</ul>";
 }
+}
+
 if($result){$result->free();}
 $db->close();
 ?>

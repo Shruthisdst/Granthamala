@@ -32,7 +32,7 @@ while($line)
 	if($line =~ /<mandala msankhya="(.*)">/)
 	{
 		$mandala = $1;
-		print $mandala."\n";
+		# print $mandala."\n";
 	}
 	elsif($line =~ /<\/mandala>/)
 	{

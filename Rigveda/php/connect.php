@@ -1,6 +1,6 @@
 <?php
 $user='root';
-$password='mysql';
+$password='Pass246!';
 $database='grm';
 
 $db = @new mysqli('localhost', "$user", "$password", "$database");

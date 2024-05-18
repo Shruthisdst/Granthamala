@@ -57,4 +57,3 @@ sub insert_swara()
 	$sth1->execute();
 	$sth1->finish();
 }
-
