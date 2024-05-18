@@ -3,7 +3,7 @@
   src: url('Gubbi.ttf') ;
 }
 body{
-    background-image: url('../images/images.jpeg');
+    /* background-image: url('../images/brown1.jpg'); */
     background-repeat: repeat;
     font-family: Gubbi;
 }
@@ -80,10 +80,10 @@ body{
     min-height: 39em;
     font-family: Gubbi;    
 }
-
 .image{
     margin: 2em 0em 0em 19.2em;
     border: 3px solid #000;
+    
 }
 .text{
     padding: 0em 9em 1em 9em;
@@ -180,7 +180,6 @@ p{
 	font-size: 0.7em;
 	background-color: #2D0A01;
 }
-
 #footer .copyright {
 	float: right;
     color: #F4F2F0;
@@ -334,6 +333,9 @@ select{
 .lline {
 	border-left: 1px solid #B8860B;
 }
+.line{
+    font-size:2em;
+}
 .submit{
     padding-bottom: 14em;
     padding-top: 1em;
@@ -349,7 +351,7 @@ select{
     color: #fff;
 }
 #kbd{
-	width: 290px;
+	width: 310px;
 	float: right;
 }
 .tocspan {

@@ -52,7 +52,7 @@
 								</tr>
 								<tr>
 									<td class="left"><span class="titlespan">ಪದಗಳನ್ನು ನಮೂದಿಸಿ</span></td>
-									<td class="right"><input name="text" type="text" id="title" onfocus="SetId('title')" style="height: 1.8em; margin: 1em 0em 1em 0em;"/></td>
+									<td class="right"><input name="text" type="text" id="title" onfocus="SetId('title')" style="height: 1.8em; margin: 1em 0em 1em 0em;padding:0px,0px,0px,25px;"/></td>
 								</tr>
 								 <tr>
 									<td class="left">&nbsp;</td>

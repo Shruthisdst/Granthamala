@@ -43,9 +43,9 @@ body{
     text-shadow: 1px 1px #100000;
     color: #090909;
 }
-/* .nav_kan li a{
-    font-size: 1.7em;
-} */
+.line{
+    font-size:2em;
+}
 .nav{
 	list-style: none;
 	text-align: center;
