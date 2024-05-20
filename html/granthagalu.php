@@ -15,15 +15,15 @@
         <div class="header">
             <ul class="nav">
                 <li><a class="nav_kan" href="../index.html">ಮುಖಪುಟ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
 				<li><a class="nav_kan" href="granthamala.html">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="nav_kan" href="about.html">ಒಳನೋಟ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="nav_kan" href="anuvadakaru.html">ಅನುವಾದಕರ ಪಟ್ಟಿ</a></li>
-				<li>|</li>
+				<li class="line;">|</li>
                 <li><a class="active nav_kan" href="purana_list.html">ಸಂಗ್ರಹ</a></li>
-                <li>|</li>
+                <li class="line;">|</li>
                 <li><a class="nav_kan" href="search.php">ಹುಡುಕಿ</a></li>
             </ul>
         </div>

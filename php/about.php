@@ -13,7 +13,7 @@
         <div class="header">
             <ul class="nav">
                 <li><a class="nav_kan" href="../index.php">ಮುಖಪುಟ</a></li>
-				<li style="font-size:2em;">|</li>
+				<li class="line">|</li>
 				<li><a class="nav_kan" href="list.php">ಗ್ರಂಥರತ್ನಮಾಲಾ</a></li>
 				<li style="font-size:2em;">|</li>
 				<li><a class="nav_kan" href="../Rigveda/index.php" target="_blank">ಋಗ್ವೇದಸಂಹಿತಾ</a></li>
