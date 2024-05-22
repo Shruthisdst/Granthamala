@@ -84,7 +84,9 @@ body{
     min-height: 47em;
     font-family: nudi;    
 }
-
+/* .s1 a {
+    font-size: 1.2em;
+} */
 .image{
     margin: 2em 0em 0em 17.5em;
     border: 3px solid #000;
@@ -243,19 +245,22 @@ p{
     text-decoration: underline;
 }
 .book{
-    padding-top: 1em;
+    padding-top: 1.7em;
     padding-bottom: 0.2em;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #731F11;
+    font-weight: 600;
 }
 .dnone{
 	display: none;
+    font-size: 1em;
 }
 .treeview{
     margin-left: 1.5em;
 }
-.treeview ul li { 
+
+.treeview ul li{ 
 	list-style-type: none; 
 	list-style-position:outside;
 	padding-bottom: 0.5em;
@@ -265,8 +270,13 @@ p{
 	text-indent: -18px;
     margin-left: 2em;
     line-height: 1.5;
-    font-size: 1.4em;
+    /* font-size: 2em; */
 }
+
+.a{
+    /* font-size: 2em; */
+}
+
 .btitle{
     margin-left: 2em;
 }
@@ -280,15 +290,15 @@ p{
 
 .s1 a{
 	color: #0d0d0d;
-	font-size: 1em;
+	font-size: 1.4em;
 }
 .s1 a:hover{
 	text-decoration: underline;
 }
 
 .s2 a{
-	color: #532900;
-	font-size: 1em;
+	color: #0b0b0b;
+	font-size: 1.4em;
 }
 .s2 a:hover{
 	text-decoration: underline;
@@ -363,8 +373,9 @@ select{
     font-size: 1.4em;
 }
 #button2{
-    margin-left: 2em;.st
+    margin-left: 2em;
 }
+
 #button{
     margin-left: 1em;
 }
