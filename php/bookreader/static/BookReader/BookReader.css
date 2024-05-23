@@ -58,7 +58,7 @@ a {
     background: #9A9B9D url(images/table.jpg);
 */
     background: #9A9B9D;
-    height: expression(documentElement.clientHeight);
+    _height: expression(documentElement.clientHeight);
 }
 
 #BRpageview {
@@ -383,7 +383,7 @@ a.BRgrey:visited   { color: #666; }
     font-size: 11px;
     color: white;
     background-color: #9A9B9D;
-    opacity: 0.85;
+    opacity: 0.85,
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -458,12 +458,12 @@ a.BRgrey:visited   { color: #666; }
     text-align: center;
     padding: 10px 20px 30px;
 }
-/* .BRfloat label {
+.BRfloat label {
     display: block;
     font-weight: 700;
     font-size: 1.6em;
     margin: 5px 0;
-} */
+}
 .BRfloat label.sub {
     display: inline;
     padding: 10px 30px 10px 0;
@@ -482,7 +482,7 @@ a.BRgrey:visited   { color: #666; }
     font-size: 1.4em;
     line-height: 1.5em;
     font-weight: normal;
-}label
+}
 .BRfloat textarea {
     height: 85px;
 }
@@ -577,19 +577,6 @@ div#BRpage {
     padding-left:12px;
     text-align: right;
 }
-/* div#BRnav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    overflow: visible;
-    z-index: 100;
-    background-color: #e2dcc5;    
-    
-    -webkit-box-shadow: 1px 1px 2px #333;
-    /* No shadow for FF, to be consistent with toolbar */
- 
 div#BRnav {
     position: fixed;
     bottom: 0;
@@ -602,17 +589,9 @@ div#BRnav {
     
     -webkit-box-shadow: 1px 1px 2px #333;
     /* No shadow for FF, to be consistent with toolbar */
+    _position:absolute;
+    _top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); 
 }
-
-/* For older versions of Internet Explorer */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    div#BRnav {
-        position: absolute;
-        top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
-    }
-}
-
-
 div#BRnavpos {
     position: relative;
     margin-right: 280px;
