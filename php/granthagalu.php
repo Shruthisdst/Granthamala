@@ -37,9 +37,7 @@ $query = "SELECT DISTINCT book_id, btitle FROM GM_Toc WHERE ctitle = '$ctitle'";
 
 $result = $db->query($query);
 
-if($result){
-	$num_rows = $result->num_rows;
-// $num_rows = $result ? $result->num_rows : 0;
+$num_rows = $result ? $result->num_rows : 0;
 
 if($num_rows > 0)
 {
@@ -70,7 +68,6 @@ if($num_rows > 0)
 		}
     }
     echo "</ul>";
-}
 }
 
 if($result){$result->free();}
