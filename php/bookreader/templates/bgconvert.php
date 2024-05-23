@@ -11,9 +11,9 @@
 	if($reduce == 1)
 	{
 		$pdfurl = "../../../Volumes/PDF/".$bookID;
-		$imgurl = "../../../Volumes/jpg/2/".$bookID;
-		$dzimgurl = "../../../Volumes/jpg/1/".$bookID;
-		$scale = 700;
+		$imgurl = "../../../Volumes/jpg/1/".$bookID;
+		$dzimgurl = "../../../Volumes/jpg/2/".$bookID;
+		$scale = 2100;
 		$djvurl = "../../../Volumes/djvu/".$bookID;
 		$tifurl = "../../../Volumes/tif/".$bookID;
 		
