@@ -74,7 +74,7 @@
                     <span class="purana_name">
                         <a href="granthagalu.php?ctitle=ನರಸಿಂಹ%20ಪುರಾಣ">ನರಸಿಂಹ ಪುರಾಣ</a>
                     </span>
-                </li>ಶ್ರೀದೇವೀಭಾಗವತಂ ಮಹಾಪುರಾಣ
+                </li>
 
                 <li><span  class="authname">ಶ್ರೀ ಬೇಲದಕೆರೆ ಸೂರ್ಯನಾರಾಯಣ ಶಾಸ್ತ್ರಿ</span><br />
                     <span class="purana_name">
