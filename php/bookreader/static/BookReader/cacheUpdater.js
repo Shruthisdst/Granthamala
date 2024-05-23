@@ -7,18 +7,16 @@
 	cacheStatusValues[4] = 'updateready';
 	cacheStatusValues[5] = 'obsolete';
 
-	if(window.applicationCache){
-		var cache = window.applicationCache;
-		cache.addEventListener('cached', logEvent, false);
-		cache.addEventListener('checking', logEvent, false);
-		cache.addEventListener('downloading', logEvent, false);
-		cache.addEventListener('error', logEvent, false);
-		cache.addEventListener('noupdate', logEvent, false);
-		cache.addEventListener('obsolete', logEvent, false);
-		cache.addEventListener('progress', logEvent, false);
-		cache.addEventListener('updateready', logEvent, false);
-			}else{console.error("window.applicationCache is not available");
-		}
+	var cache = window.applicationCache;
+	cache.addEventListener('cached', logEvent, false);
+	cache.addEventListener('checking', logEvent, false);
+	cache.addEventListener('downloading', logEvent, false);
+	cache.addEventListener('error', logEvent, false);
+	cache.addEventListener('noupdate', logEvent, false);
+	cache.addEventListener('obsolete', logEvent, false);
+	cache.addEventListener('progress', logEvent, false);
+	cache.addEventListener('updateready', logEvent, false);
+	
 	
 	function logEvent(e) {
 		var online, status, type, message;
