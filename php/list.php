@@ -119,8 +119,8 @@
 <span  class="purana_name">ಶ್ರೀ ಎಡತೊರೆ ಚಂದ್ರಶೇಖರ ಶಾಸ್ತ್ರಿ</span>
 </li>
 
-<li class="book_title"><a href="treeview.php?book_id=327" target="_blank">ಅಗಸ್ತ್ಯ ಸಂಹಿತೆ</a><br/>
-<span  class="purana_name">ಶ್ರೀ ಸೀತಾರಾಮ ಶಾಸ್ತ್ರಿ ಎಸ್.</span>
+<li class="book_title"><a href="treeview.php?book_id=346" target="_blank">ಲಲಿತಾ ತ್ರಿಶತಿ ಭಾಷ್ಯಂ</a><br />
+<span  class="purana_name">ಶ್ರೀ ಪಾಟಣಕರ ಚಂದ್ರಶೇಖರ ಭಟ್ಟ</span>
 </li>
 
 <li class="book_title"><a href="granthagalu.php?ctitle=%E0%B2%B6%E0%B3%8D%E0%B2%B0%E0%B3%80+%E0%B2%B8%E0%B3%8C%E0%B2%B0%E0%B2%AA%E0%B3%81%E0%B2%B0%E0%B2%BE%E0%B2%A3" target="_blank">ಶ್ರೀ ಸೌರಪುರಾಣ&nbsp;(<span style="font-size: 0.85em;">2</span>&nbsp;ಸಂಪುಟಗಳು)</a><br />
@@ -264,6 +264,11 @@
 <li class="book_title"><a href="treeview.php?book_id=338" target="_blank">ಛಾಂದೋಗ್ಯಪನಿಷದ್ಭಾಷ್ಯ</a><br />
 <span  class="purana_name">ಶ್ರೀ ಸಚ್ಚಿದಾನಂದೇಂದ್ರ ಸರಸ್ವತಿ ಮಹಾಸ್ವಾಮಿಗಳು (ಅ.ಪ್ರ.ಕಾ)</span>
 </li>
+
+<li class="book_title"><a href="treeview.php?book_id=327" target="_blank">ಅಗಸ್ತ್ಯ ಸಂಹಿತೆ</a><br/>
+<span  class="purana_name">ಶ್ರೀ ಸೀತಾರಾಮ ಶಾಸ್ತ್ರಿ ಎಸ್.</span>
+</li>
+
 </ul> 
 		</div>
         <div id="footer">
